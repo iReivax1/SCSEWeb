@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Maps from './components/pages/Maps';
 import VirtualTour from './components/pages/VirtualTour';
 import AI from './components/Courses/AI';
+import CoursesHome from './components/Courses/CoursesHome';
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' exact component={Home} />
         <Route path='/maps' exact component={Maps} />
         <Route path='/tour' exact component={VirtualTour} />
+        <Route path='/all_courses' exact component={CoursesHome} />
         <Route path='/AI' exact component={AI}/>
       </Switch>
     </Router>

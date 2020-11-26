@@ -5,10 +5,18 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+:root{
+  --mainColor: #A52A2A;
+  --lightColor:#DC143C;
+  --mainWhite: #f3f3f3;
+  --mainDark: #000000;
+  --mainYellow: #ffa400;
+}
+
 .home,
-.services,
-.products,
-.sign-up {
+.maps,
+.courses
+{
   display: flex;
   height: 90vh;
   align-items: center;
