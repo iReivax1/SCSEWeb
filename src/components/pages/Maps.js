@@ -6,6 +6,7 @@ function Maps() {
     return (
         <>
             <MapPlacement></MapPlacement>
+            
             <Footer/>
         </>
     )
