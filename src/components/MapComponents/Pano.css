@@ -1,0 +1,23 @@
+.pnlm-about-msg {
+    visibility: hidden;
+}
+
+.pnlm-controls-container {
+    position: absolute;
+    bottom: 0;
+    right:4px;
+    z-index: 1;
+}
+
+.pnlm-controls {
+    margin-bottom: 4px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-color: rgba(0,0,0,0.4);
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 2;
+    /* Fix Safari fullscreen bug */
+    -webkit-transform: translateZ(9999px);
+    transform: translateZ(9999px);
+}
