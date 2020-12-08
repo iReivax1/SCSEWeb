@@ -10,21 +10,16 @@ export default class pano extends Component {
       mediaPhoto: this.props.pano_img,
     };
   }
+
   handleHotSpotClick = () => {
     this.setState({
       mediaPhoto: "/images/pano.jpg",
     });
   };
-  handleMouseDown = e => {
-    if (e.button === 0)
-    {
-      e.preventDefault();
-    }
-  }
-  
+
   render() {
     return (
-      <Pannellum onMousedown={this.handleMouseDown}
+      <Pannellum
       width="100%"
       height="100vh"
       image= {this.props.pano_img}
@@ -37,7 +32,7 @@ export default class pano extends Component {
       orientationOnByDefault={false}
       draggable
       keyboardZoom
-      mouseZoom = {false}
+      mouseZoom
       preview=""
       previewAuthor=""
       previewTitle=""
@@ -55,13 +50,14 @@ export default class pano extends Component {
       onTouchend={(evt) => { console.log("Touch End", evt); }}
       hotspotDebug={false}
     >
-      <Pannellum.Hotspot
-        type="info"
-        pitch={11}
-        yaw={-167}
-        text="See courses"
-        URL="/all_courses"
-      />
+    <Pannellum.Hotspot
+      type="info"
+      pitch={11}
+      yaw={-167}
+      text="See courses"
+      URL="/all_courses"
+    />
+
     <Pannellum.Hotspot 
     type="custom"
     pitch={31}

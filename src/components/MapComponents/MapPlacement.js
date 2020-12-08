@@ -18,6 +18,12 @@ export default class MapPlacement extends Component {
     this.ref = React.createRef();
   }
 
+
+  
+  testaction = () => {
+      console.log("s")
+  }
+
   handleClick_sw1 = () => {
     this.setState({
       mediaPhoto: "/images/pano.jpg",
