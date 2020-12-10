@@ -30,6 +30,12 @@ export default class MapPlacement extends Component {
       test: false
     });
   }
+  handleClick_sw2 = () => {
+    this.setState({
+      mediaPhoto: "/images/test.jpg",
+      test: false
+    })
+  }
   handleClick_sw3 = () => {
     this.setState({
       mediaPhoto: "/images/alma.jpg",
@@ -48,10 +54,13 @@ export default class MapPlacement extends Component {
     return (
       <React.Fragment onMouseDown={this.handleMouseDown} >
         <div className='hero-container'>
-          <Pano pano_img = {this.state.mediaPhoto}></Pano>
+          <Pano pano_img = {this.state.mediaPhoto}>This is hidden</Pano>
         </div>
         <ButtonContainer onClick={() => this.handleClick_sw1()}>
           Software Lab 1
+        </ButtonContainer>
+        <ButtonContainer onClick = {() => this.handleClick_sw2()}>
+          Software Lab 2
         </ButtonContainer>
         <ButtonContainer onClick={() => this.handleClick_sw3()}>
           Software Lab 3
