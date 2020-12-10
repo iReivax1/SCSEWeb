@@ -8,6 +8,7 @@ export default class pano extends Component {
     super(props);
     this.state = {
       mediaPhoto: this.props.pano_img,
+      showTextOverlay: false
     };
   }
 
@@ -63,7 +64,14 @@ export default class pano extends Component {
     pitch={31}
     yaw={150}
     handleClick={(evt , args) => this.handleHotSpotClick(evt , args)}
-    
+    tooltip = {(hotSpotDiv, args) => {
+      const imageDiv = document.createElement('img');
+      imageDiv.setAttribute('width', '45');
+      imageDiv.setAttribute('height', '45');
+      imageDiv.setAttribute('src', '/images/up.png')
+      hotSpotDiv.appendChild(imageDiv);
+      console.log(hotSpotDiv)
+    }}
     />
 
     </Pannellum>
