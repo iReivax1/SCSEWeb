@@ -9,6 +9,7 @@ export default class MapPlacement extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      layoutImage: "/images/pano.jpg",
       mediaPhoto: "/images/pano.jpg",
       yaww: 180,
       test: false,
@@ -18,55 +19,87 @@ export default class MapPlacement extends Component {
     this.ref = React.createRef();
   }
 
-
-  
-  testaction = () => {
-      console.log("s")
+  handleClick_l1 = () => {
+    this.setState({
+      layoutImage: '/images/pano.jpg'
+    }
+    )
   }
-
+  handleClick_l2 = () => {
+    this.setState({
+      layoutImage: '/images/pano.jpg'
+    }
+    )
+  }
+  handleClick_b1 = () => {
+    this.setState({
+      layoutImage: '/images/pano.jpg'
+    }
+    )
+  }
+  handleClick_b2 = () => {
+    this.setState({
+      layoutImage: '/images/pano.jpg'
+    }
+    )
+  }
+  handleClick_b3 = () => {
+    this.setState({
+      layoutImage: '/images/pano.jpg'
+    }
+    )
+  }
+  handleClick_b4 = () => {
+    this.setState({
+      layoutImage: '/images/pano.jpg'
+    }
+    )
+  }
   handleClick_sw1 = () => {
     this.setState({
       mediaPhoto: "/images/pano.jpg",
-      test: false
     });
   }
   handleClick_sw2 = () => {
     this.setState({
       mediaPhoto: "/images/test.jpg",
-      test: false
     })
   }
   handleClick_sw3 = () => {
     this.setState({
       mediaPhoto: "/images/alma.jpg",
-      test: false
     });
   };
-  handleMouseDown = e => {
-    if (e.button === 0)
-    {
-      e.preventDefault();
-    }
-  }
+  handleClick_hw1 = () => {
+    this.setState({
+      mediaPhoto: "/images/test_2.jpg",
+    });
+  };
   
 
   render() {
     return (
       <React.Fragment onMouseDown={this.handleMouseDown} >
         <div className='hero-container'>
-          <Pano pano_img = {this.state.mediaPhoto}>This is hidden</Pano>
+          <Pano pano_img = {this.state.layoutImage}>This is hidden</Pano>
         </div>
-        <ButtonContainer onClick={() => this.handleClick_sw1()}>
-          Software Lab 1
+        <ButtonContainer onClick={() => this.handleClick_l1()}>
+          Level 2
         </ButtonContainer>
-        <ButtonContainer onClick = {() => this.handleClick_sw2()}>
-          Software Lab 2
+        <ButtonContainer onClick = {() => this.handleClick_l2()}>
+          Level 1
         </ButtonContainer>
-        <ButtonContainer onClick={() => this.handleClick_sw3()}>
-          Software Lab 3
+        <ButtonContainer onClick={() => this.handleClick_b1()}>
+          Level B1
         </ButtonContainer>
-        <ButtonContainer>
-          Hardware lab 1
+        <ButtonContainer onClick={() => this.handleClick_b2()}>
+          Level B2
+        </ButtonContainer>
+        <ButtonContainer onClick={() => this.handleClick_b3()}>
+          Level B3
+        </ButtonContainer>
+        <ButtonContainer onClick={() => this.handleClick_b4()}>
+          Level B4
         </ButtonContainer>
       </React.Fragment>
     )

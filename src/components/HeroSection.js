@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
@@ -18,14 +19,16 @@ function HeroSection() {
         >
           GET STARTED
         </Button>
+        
         <Button
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
-          onClick={console.log('hey')}
+          onClick={event =>  window.location.href='/videos'}
         >
           WATCH TOUR <i className='far fa-play-circle' />
         </Button>
+        
       </div>
     </div>
   );

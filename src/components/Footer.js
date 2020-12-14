@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
+      {/* <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
           Join the newsletter our latest news
         </p>
@@ -24,29 +24,29 @@ function Footer() {
             <Button buttonStyle='btn--outline'>Subscribe</Button>
           </form>
         </div>
-      </section>
+      </section> */}
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Career Prospects</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to={{ pathname:'http://scse.ntu.edu.sg/aboutus/Pages/Overview.aspx'}} target="_blank">Overview</Link>
+            <Link to={{ pathname:'http://scse.ntu.edu.sg/aboutus/career/Pages/default.aspx'}} target="_blank">Career Prospects</Link>
+            <Link to={{ pathname:'https://www.ntu.edu.sg/Pages/Disclaimer.aspx'}} target="_blank">Terms of Service</Link>
+            <Link to={{ pathname:"https://www.ntu.edu.sg/Pages/Privacy.aspx"}} target="_blank">Data protection and privacy</Link>
+            <Link to={{ pathname:"https://www.ntu.edu.sg/Pages/Copyright.aspx"}} target="_blank"> Copyright</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>NTU Website</Link>
+            <Link to={{ pathname:'http://scse.ntu.edu.sg/ContactUs/Pages/General-Office.aspx'}} target="_blank">Contact</Link>
+            <Link to={{ pathname:'http://scse.ntu.edu.sg/Pages/Home.aspx'}} target="_blank">NTU Website</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link to={{ pathname: "https://www.instagram.com/scse_ntu/" }} target="_blank">Instagram</Link>
+            <Link to={{ pathname: "https://www.facebook.com/scse.ntu" }} target="_blank">Facebook</Link>
+            <Link to={{ pathname: "https://www.youtube.com/user/SCEMarketing" }} target="_blank">Youtube</Link>
           </div>
         </div>
       </div>
@@ -55,14 +55,14 @@ function Footer() {
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
               SCSE
-              <i class='fab fa-typo3' />
+              {/* <i class='fab fa-typo3' /> */}
             </Link>
           </div>
           <small class='website-rights'>School of computing science and engineering</small>
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
+              to={{ pathname: "https://www.facebook.com/scse.ntu" }}
               target='_blank'
               aria-label='Facebook'
             >
@@ -70,7 +70,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
+              to={{ pathname: "https://www.instagram.com/scse_ntu/" }} 
               target='_blank'
               aria-label='Instagram'
             >
@@ -78,7 +78,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
+              to={{ pathname: "https://www.youtube.com/user/SCEMarketing" }}
               target='_blank'
               aria-label='Youtube'
             >
@@ -86,15 +86,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i class='fab fa-twitter' />
-            </Link>
-            <Link
-              class='social-icon-link twitter'
-              to='/'
+              to={{pathname:'https://www.linkedin.com/in/scse-ntu/'}}
               target='_blank'
               aria-label='LinkedIn'
             >

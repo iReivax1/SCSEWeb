@@ -1,6 +1,5 @@
 export const courseProducts = [
     {
-    
       courseName: "AI",
       desc: "la la la blah blah"
     }

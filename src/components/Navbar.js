@@ -27,7 +27,8 @@ function Navbar() {
        <nav className="navbar">
            <div className="navbar-container">
               <Link to="/" className="navbar-logo">
-                    SCSE <i className='fab fa-typo3' />
+                  SCSE
+                    {/* SCSE <i className='fab fa-typo3' /> */}
               </Link>
               <div className="menu-icon" onClick={handleClick}>
                   <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -39,8 +40,8 @@ function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/maps' className='nav-links' onClick={closeMobileMenu}>
-                        Map
+                    <Link to='/videos' className='nav-links' onClick={closeMobileMenu}>
+                        Videos
                     </Link>
                 </li> 
                 <li className='nav-item'>
@@ -49,7 +50,7 @@ function Navbar() {
                     </Link>
                 </li>      
               </ul>
-                {button && <Button buttonStyle='btn--outline'>Virtual Tour</Button>}
+                {button && <Button buttonStyle='btn--outline'>360 Map</Button>}
            </div>
        </nav>
         

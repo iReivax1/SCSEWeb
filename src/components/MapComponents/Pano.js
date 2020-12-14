@@ -58,7 +58,7 @@ export default class pano extends Component {
       text="See courses"
       URL="/all_courses"
     />
-
+    
     <Pannellum.Hotspot 
     type="custom"
     pitch={31}
