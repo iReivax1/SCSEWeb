@@ -79,7 +79,7 @@ export default class MapPlacement extends Component {
 
   render() {
     return (
-      <React.Fragment onMouseDown={this.handleMouseDown} >
+      <React.Fragment >
         <div className='hero-container'>
           <Pano pano_img = {this.state.layoutImage}>This is hidden</Pano>
         </div>

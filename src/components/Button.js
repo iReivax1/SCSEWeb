@@ -32,8 +32,8 @@ export const ButtonContainer = styled.button`
   font-size : 1.4rem;
   background: transparent;
   border: 0.1rem solid var(--lightColor);
-  border-color:var(--mainYellow);
-  color:var(--mainYellow);
+  border-color:var(--mainBlue);
+  color:var(--mainBlue);
   border-radius: 0.5rem;
   padding:0.2rem 0.5rem;
   cursor:pointer;

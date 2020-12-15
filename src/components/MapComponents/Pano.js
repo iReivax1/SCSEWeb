@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Pannellum, PannellumVideo } from "pannellum-react";
+import {ProductConsumer,ProductContext} from '../../Context';
 import "./Pano.css"
 
 
@@ -19,6 +20,7 @@ export default class pano extends Component {
   };
 
   render() {
+    let value = this.context;
     return (
       <Pannellum
       width="100%"
@@ -55,10 +57,11 @@ export default class pano extends Component {
       type="info"
       pitch={11}
       yaw={-167}
-      text="See courses"
-      URL="/all_courses"
+      text="more details"
+      handleClick={(evt , args) => {value.openModal(args.id); console.log('testing click');}}
+      handleClickArg={{ "id":1 }}
     />
-    
+    {/* args is id? */}
     <Pannellum.Hotspot 
     type="custom"
     pitch={31}

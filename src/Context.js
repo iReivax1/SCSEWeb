@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {courseProducts, detailedProduct} from './data';
+import {courseProducts, mapProducts,detailedCourseProduct,detailedMapProducts} from './data';
 
 const ProductContext = React.createContext();
 //2 components in context, provider and consumer
@@ -8,10 +8,14 @@ class ProductProvider extends Component {
     state = {
         // if products: storeProducts -> actually pass by reference so any change to products will also change storeProducts in data
         courses: [],
-        detailedProduct: detailedProduct,
+        mapProducts: [],
+        detailedMapProduct: detailedMapProducts,
+        isModalOpen:false,
+        modalMapProduct: detailedMapProducts,
         }
     componentDidMount(){
         this.setCourses();
+        this.setMapProducts()
     }
     //hence use copy method to "pass by value"
     setCourses = () => {
@@ -24,6 +28,27 @@ class ProductProvider extends Component {
             return {courses : tempCourses};
         });
     };
+    setMapProducts = () => {
+        let tempMapProducts= [];
+        mapProducts.forEach(item => {
+            const singleItem = {...item};
+            tempMapProducts = [...tempMapProducts, singleItem];
+        })
+        this.setState(() => {
+            return {mapProducts : tempMapProducts};
+        });
+    };
+    openModal = (id) => {
+        const product = this.getItem(id);
+        this.setState(()=>{
+            return {modalMapProduct : product, isModalOpen:true };
+        })
+    }
+    closeModal = () => {
+        this.setState(()=>{
+            return {isModalOpen : false};
+        })
+    }
 
     getItem = (id) => {
         const product = this.state.products.find(item => item.id === id);
