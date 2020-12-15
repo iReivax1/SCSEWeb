@@ -57,7 +57,8 @@ export default class pano extends Component {
       type="info"
       pitch={11}
       yaw={-167}
-      text="more details"
+      text="Click for details"
+      URL="https://github.com/farminf/pannellum-react"
       handleClick={(evt , args) => {value.openModal(args.id); console.log('testing click');}}
       handleClickArg={{ "id":1 }}
     />
