@@ -10,11 +10,22 @@ export default class MapPlacement extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      layoutImage: ["/images/mapLV1_a.jpg", "/images/mapLV1_b.jpg", "/images/mapLV1_c.jpg"],
+      layoutImage: [{
+        btnNames: ["Lounge","SWL1","HWl1"],
+        image: "/images/mapLV1_a.jpg"
+      },
+      {
+        btnNames: ["HWL2"],
+        image: "/images/mapLV1_b.jpg"
+      },
+      {
+        btnNames: ["SWL2", "HPL"],
+        image: "/images/mapLV1_c.jpg"
+      }],
       yaww: 180,
       updateText: "initial",
       author: "SCSE",
-      level: 1
+      level: 1,
     };
     this.ref = React.createRef();
     this.handleClick_l1 = this.handleClick_l1.bind(this);
@@ -23,7 +34,18 @@ export default class MapPlacement extends Component {
 
   handleClick_l1 = () => {
     this.setState({
-      layoutImage: ["/images/mapLV1_a.jpg", "/images/mapLV1_b.jpg", "/images/mapLV1_c.jpg"],
+      layoutImage: [{
+        btnNames: ["Lounge","SWL1","HWl1"],
+        image: "/images/mapLV1_a.jpg"
+      },
+      {
+        btnNames: ["HWL2"],
+        image: "/images/mapLV1_b.jpg"
+      },
+      {
+        btnNames: ["SWL2", "HPL"],
+        image: "/images/mapLV1_c.jpg"
+      }],
       level: "1"
     }
     )
@@ -34,7 +56,7 @@ export default class MapPlacement extends Component {
       level: "2"
     }
     )
-    
+
   }
   handleClick_b1 = () => {
     this.setState({
@@ -70,12 +92,12 @@ export default class MapPlacement extends Component {
     return (
       <React.Fragment >
         <div className='layout-container'>
-          <Layout layout_img = {this.state.layoutImage} level = {this.state.level}></Layout>
+          <Layout layout_img={this.state.layoutImage} level={this.state.level}></Layout>
         </div>
-        <ButtonContainer onClick={() => {this.handleClick_l2(); console.log(this.state.layoutImage)}}>
+        <ButtonContainer onClick={() => { this.handleClick_l2(); console.log(this.state.layoutImage) }}>
           Level 2
         </ButtonContainer>
-        <ButtonContainer onClick = {() => this.handleClick_l1()}>
+        <ButtonContainer onClick={() => this.handleClick_l1()}>
           Level 1
         </ButtonContainer>
         <ButtonContainer onClick={() => this.handleClick_b1()}>

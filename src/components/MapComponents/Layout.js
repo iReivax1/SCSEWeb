@@ -12,23 +12,27 @@ export default class Layout extends Component {
             level: this.props.level,
             showPano: false,
             mediaPhoto: "/images/lounge.jpg",
+            areaName: "lounge",
+            btnArr: []
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
     }
-
+    componentDidMount(){
+    }
     handleToggleClick() {
         this.setState({
             showPano: true,
           });
       }
     render() {
-        this.images = this.props.layout_img.map((image) =>
+        
+        this.items = this.props.layout_img.map((item) =>
             <div className='container'>
-            <ButtonOverlay onClick={this.handleToggleClick}> try me</ButtonOverlay>
-            <img src={image}/>
+            {item.btnNames.map((btnName)=><ButtonOverlay onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>)}
+            <img src={item.image}/>
             </div>
         );
-        let loadLayout = <ImageScroller>{this.images}</ImageScroller>
+        let loadLayout = <ImageScroller>{this.items}</ImageScroller>
         let loadPano = <div className='layout-container'><Pano pano_img={this.state.mediaPhoto}></Pano> </div>
         
         return (
