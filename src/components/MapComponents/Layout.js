@@ -1,6 +1,8 @@
+
 import React, { Component } from 'react'
 import ImageScroller from 'react-image-scroller';
 import './Layout.css'
+import { ButtonOverlay } from '../Button';
 export default class Layout extends Component {
     constructor(props) {
         super(props);
@@ -12,19 +14,17 @@ export default class Layout extends Component {
     render() {
         this.images = this.state.layout_img.map((image) =>
             <div className='container'>
-            <button className="btn"> button</button>
+            <ButtonOverlay onClick={() => console.log("test click")}> try me</ButtonOverlay>
             <img src={image}/>
             </div>
         );
 
         return (
-            <div>
                 <ImageScroller>
                 
                 {this.images}
                 
                 </ImageScroller>
-            </div>
         )
     }
 }

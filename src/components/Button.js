@@ -8,22 +8,22 @@ const STYLES = ['btn--primary', 'btn--outline']
 const SIZES = ['btn--medium', 'btn--large']
 
 export const Button = ({
-    children,
-    type,
-    onClick,
-    buttonStyle,
-    buttonSize
+  children,
+  type,
+  onClick,
+  buttonStyle,
+  buttonSize
 }) => {
-    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
-    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
+  const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
+  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0]
 
-    return (
-        <Link to='/maps' className='btn-mobile'>
-            <button className={`btn ${checkButtonSize} ${checkButtonSize}`} onClick={onClick} type={type}>
-                {children}
-            </button>
-        </Link>
-    )
+  return (
+    <Link to='/maps' className='btn-mobile'>
+      <button className={`btn ${checkButtonSize} ${checkButtonSize}`} onClick={onClick} type={type}>
+        {children}
+      </button>
+    </Link>
+  )
 };
 
 
@@ -46,4 +46,25 @@ export const ButtonContainer = styled.button`
 &:focus{
   outline: none;
 }
+`;
+
+export const ButtonOverlay = styled.button`
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: black;
+  font-size: 12px;
+  padding: 8px 8px;
+  cursor: pointer;
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  &:hover{
+    background:var(--mainBlue);
+    color:var(--mainWhite);
+  }
+  &:focus{
+    outline: none;
 `;

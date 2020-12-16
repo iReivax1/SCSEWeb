@@ -15,16 +15,18 @@ video {
     overflow: hidden;
     outline: none;
   }
-  .hero-container {
+  .layout-container {
     /* background: url('/images/img-home.jpg') center center/cover no-repeat; */
     height: 100vh;
+    background-color:#fff;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     /* align-items: center; */
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
     object-fit: contain;
+    
   }
   
   .hero-container > h1 {

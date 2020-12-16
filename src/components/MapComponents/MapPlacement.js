@@ -62,7 +62,7 @@ export default class MapPlacement extends Component {
   render() {
     return (
       <React.Fragment >
-        <div className='hero-container'>
+        <div className='layout-container'>
           <Layout layout_img = {this.state.layoutImage} level = {this.state.level}></Layout>
         </div>
         <ButtonContainer onClick={() => this.handleClick_l1()}>
