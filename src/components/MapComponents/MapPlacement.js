@@ -12,15 +12,15 @@ export default class MapPlacement extends Component {
     this.state = {
       levelData: [{
         btnNames: ["Lounge","SWL1","HWl1"],
-        image: "/images/mapLV1_a.jpg",
+        image: "/images/level1/mapLV1_a.jpg",
       },
       {
         btnNames: ["HWL2"],
-        image: "/images/mapLV1_b.jpg",
+        image: "/images/level1/mapLV1_b.jpg",
       },
       {
         btnNames: ["SWL2", "HPL"],
-        image: "/images/mapLV1_c.jpg",
+        image: "/images/level1/mapLV1_c.jpg",
       }],
       yaww: 180,
       updateText: "initial",
@@ -36,15 +36,15 @@ export default class MapPlacement extends Component {
     this.setState({
       levelData: [{
         btnNames: ["Lounge","SWL1","HWL1"],
-        image: "/images/mapLV1_a.jpg",
+        image: "/images/level1/mapLV1_a.jpg",
       },
       {
         btnNames: ["HWL2"],
-        image: "/images/mapLV1_b.jpg",
+        image: "/images/level1/mapLV1_b.jpg",
       },
       {
         btnNames: ["SWL2", "HPL"],
-        image: "/images/mapLV1_c.jpg",
+        image: "/images/level1/mapLV1_c.jpg",
       }],
       level: "1"
     }
@@ -52,7 +52,7 @@ export default class MapPlacement extends Component {
   }
   handleClick_l2 = () => {
     this.setState({
-      layoutImage: ["/images/mapLV2.jpg", '/images/img-home.jpg'],
+      layoutImage: ["/images/level2/mapLV2.jpg", '/images/img-home.jpg'],
       level: "2"
     }
     )
@@ -67,21 +67,21 @@ export default class MapPlacement extends Component {
   }
   handleClick_b2 = () => {
     this.setState({
-      layoutImage: ['/images/mapLV2.jpg'],
+      layoutImage: ['/images/level2/mapLV2.jpg'],
       level: 'b2'
     }
     )
   }
   handleClick_b3 = () => {
     this.setState({
-      layoutImage: ['/images/mapLV2.jpg'],
+      layoutImage: ['/images/level2/mapLV2.jpg'],
       level: 'b3'
     }
     )
   }
   handleClick_b4 = () => {
     this.setState({
-      layoutImage: ['/images/mapLV2.jpg'],
+      layoutImage: ['/images/level2/mapLV2.jpg'],
       level: 'b4'
     }
     )

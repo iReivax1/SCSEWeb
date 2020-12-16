@@ -26,13 +26,13 @@ export default class Layout extends Component {
         else if (event.target.id === "SWL1"){
             this.setState({
                 showPano: true,
-                pano_img: '/images/sw1_1.jpg'
+                pano_img: '/images/level1/swlab1/sw1_1.jpg'
               });
         }
         else if (event.target.id === "HWl1"){
             this.setState({
                 showPano: true,
-                pano_img: '/images/hw2_2.jpg'
+                pano_img: '/images/level1/hwlab2/hw2_2.jpg'
               });
         }
       }
