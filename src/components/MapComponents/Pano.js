@@ -8,13 +8,21 @@ export default class pano extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mediaPhoto: this.props.pano_img,
+      pano_img: this.props.pano_img,
     };
   }
-
+  componentDidMount(){
+    this.setPanoImage();
+  }
+  setPanoImage = () => {
+    this.setState({
+      pano_img : this.props.pano_img
+    }
+  );
+  }
   handleHotSpotClick = () => {
     this.setState({
-      mediaPhoto: "/images/lounge.jpg",
+      pano_img: "/images/sw1_1.jpg",
     });
   };
 
@@ -24,7 +32,7 @@ export default class pano extends Component {
       <Pannellum
       width="100%"
       height="100vh"
-      image= {this.props.pano_img}
+      image= {this.state.pano_img}
       pitch={10}
       yaw={180}
       hfov={500}

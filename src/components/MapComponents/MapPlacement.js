@@ -10,17 +10,17 @@ export default class MapPlacement extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      layoutImage: [{
+      levelData: [{
         btnNames: ["Lounge","SWL1","HWl1"],
-        image: "/images/mapLV1_a.jpg"
+        image: "/images/mapLV1_a.jpg",
       },
       {
         btnNames: ["HWL2"],
-        image: "/images/mapLV1_b.jpg"
+        image: "/images/mapLV1_b.jpg",
       },
       {
         btnNames: ["SWL2", "HPL"],
-        image: "/images/mapLV1_c.jpg"
+        image: "/images/mapLV1_c.jpg",
       }],
       yaww: 180,
       updateText: "initial",
@@ -34,17 +34,17 @@ export default class MapPlacement extends Component {
 
   handleClick_l1 = () => {
     this.setState({
-      layoutImage: [{
-        btnNames: ["Lounge","SWL1","HWl1"],
-        image: "/images/mapLV1_a.jpg"
+      levelData: [{
+        btnNames: ["Lounge","SWL1","HWL1"],
+        image: "/images/mapLV1_a.jpg",
       },
       {
         btnNames: ["HWL2"],
-        image: "/images/mapLV1_b.jpg"
+        image: "/images/mapLV1_b.jpg",
       },
       {
         btnNames: ["SWL2", "HPL"],
-        image: "/images/mapLV1_c.jpg"
+        image: "/images/mapLV1_c.jpg",
       }],
       level: "1"
     }
@@ -92,7 +92,7 @@ export default class MapPlacement extends Component {
     return (
       <React.Fragment >
         <div className='layout-container'>
-          <Layout layout_img={this.state.layoutImage} level={this.state.level}></Layout>
+          <Layout levelData={this.state.levelData} level={this.state.level}></Layout>
         </div>
         <ButtonContainer onClick={() => { this.handleClick_l2(); console.log(this.state.layoutImage) }}>
           Level 2
