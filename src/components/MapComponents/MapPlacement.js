@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../../App.css'
 import { ButtonContainer } from '../Button';
+import Layout from './Layout';
 import './MapPlacement.css';
 import Pano from './Pano'
 
@@ -9,79 +10,60 @@ export default class MapPlacement extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      layoutImage: "/images/pano.jpg",
-      mediaPhoto: "/images/pano.jpg",
+      layoutImage: ["/images/mapLV1_a.jpg", "/images/mapLV1_b.jpg", "/images/mapLV1_c.jpg"],
+      mediaPhoto: "/images/lounge.jpg",
       yaww: 180,
-      test: false,
       updateText: "initial",
-      author: "SCSE"
+      author: "SCSE",
+      level: 1
     };
     this.ref = React.createRef();
   }
 
   handleClick_l1 = () => {
     this.setState({
-      layoutImage: '/images/pano.jpg'
+      layoutImage: ["/images/mapLV1_a.jpg", "/images/mapLV1_b.jpg", "/images/mapLV1_c.jpg"],
+      level: 1
     }
     )
   }
   handleClick_l2 = () => {
     this.setState({
-      layoutImage: '/images/pano.jpg'
+      layoutImage: '/images/mapLV2.jpg'
     }
     )
   }
   handleClick_b1 = () => {
     this.setState({
-      layoutImage: '/images/pano.jpg'
+      layoutImage: '/images/img-home.jpg'
     }
     )
   }
   handleClick_b2 = () => {
     this.setState({
-      layoutImage: '/images/pano.jpg'
+      layoutImage: '/images/mapLV2.jpg'
     }
     )
   }
   handleClick_b3 = () => {
     this.setState({
-      layoutImage: '/images/pano.jpg'
+      layoutImage: '/images/mapLV2.jpg'
     }
     )
   }
   handleClick_b4 = () => {
     this.setState({
-      layoutImage: '/images/pano.jpg'
+      layoutImage: '/images/mapLV2.jpg'
     }
     )
   }
-  handleClick_sw1 = () => {
-    this.setState({
-      mediaPhoto: "/images/pano.jpg",
-    });
-  }
-  handleClick_sw2 = () => {
-    this.setState({
-      mediaPhoto: "/images/test.jpg",
-    })
-  }
-  handleClick_sw3 = () => {
-    this.setState({
-      mediaPhoto: "/images/alma.jpg",
-    });
-  };
-  handleClick_hw1 = () => {
-    this.setState({
-      mediaPhoto: "/images/test_2.jpg",
-    });
-  };
-  
+
 
   render() {
     return (
       <React.Fragment >
         <div className='hero-container'>
-          <Pano pano_img = {this.state.layoutImage}>This is hidden</Pano>
+          <Layout layout_img = {this.state.layoutImage} level = {this.state.level}></Layout>
         </div>
         <ButtonContainer onClick={() => this.handleClick_l1()}>
           Level 2

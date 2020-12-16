@@ -9,13 +9,12 @@ export default class pano extends Component {
     super(props);
     this.state = {
       mediaPhoto: this.props.pano_img,
-      showTextOverlay: false
     };
   }
 
   handleHotSpotClick = () => {
     this.setState({
-      mediaPhoto: "/images/pano.jpg",
+      mediaPhoto: "/images/lounge.jpg",
     });
   };
 
@@ -54,11 +53,11 @@ export default class pano extends Component {
       hotspotDebug={false}
     >
     <Pannellum.Hotspot
-      type="info"
+      type="custom"
       pitch={11}
       yaw={-167}
       text="more details"
-      handleClick={(evt , args) => {value.openModal(args.id); console.log('testing click');}}
+      handleClick={(evt , args) => {value.openModal(1);}}
       handleClickArg={{ "id":1 }}
     />
     {/* args is id? */}

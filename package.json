@@ -13,6 +13,7 @@
     "react-async-script-loader": "^0.3.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",
+    "react-image-scroller": "^0.3.0",
     "react-infinite-scroll-component": "^5.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
