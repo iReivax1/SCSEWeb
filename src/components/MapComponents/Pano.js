@@ -22,7 +22,7 @@ export default class pano extends Component {
   }
   handleHotSpotClick = () => {
     this.setState({
-      pano_img: "/images/level1/swlab1/sw1_1.jpg",
+      pano_img: "/images/l1/swlab1/sw1_1.jpg",
     });
   };
 
