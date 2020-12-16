@@ -3,7 +3,7 @@ import '../../App.css'
 import { ButtonContainer } from '../Button';
 import Layout from './Layout';
 import './MapPlacement.css';
-import Pano from './Pano'
+
 
 
 export default class MapPlacement extends Component {

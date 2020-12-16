@@ -12,6 +12,8 @@ class ProductProvider extends Component {
         detailedMapProduct: detailedMapProducts,
         isModalOpen:false,
         modalMapProduct: detailedMapProducts,
+        openModal: this.openModal,
+        closeModal: this.closeModal,
         }
     componentDidMount(){
         this.setCourses();

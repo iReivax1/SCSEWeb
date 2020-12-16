@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 export default class Modal extends Component {
     render() {
         let value = this.context;
-        const { category } = value.modalMapProduct;
         const { closeModal } = value;
         let exitBtn;
         
@@ -21,7 +20,8 @@ export default class Modal extends Component {
         return (
             <ProductConsumer>
                 {(value) => {
-                    const { isModalOpen } = value;
+                    // const { isModalOpen } = value;
+                    let isModalOpen = true;
                     const { area, desc, img } = value.modalProduct;
                     if (!isModalOpen) {
                         return null;
