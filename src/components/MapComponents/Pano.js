@@ -29,7 +29,7 @@ export default class Pano extends Component {
       pano_img: "/images/l1/swlab1/sw1_1.jpg",
     });
   };
-  handleDetailsClick = () => {
+  handleDetailsClick = (e) => {
     this.setState({
       showModal: true
     })
@@ -42,7 +42,7 @@ export default class Pano extends Component {
                     title={this.state.title} 
                     status={this.state.status} 
                     quote={this.state.quote}
-                    Close={() => this.setState({ status: false, showModal: false})}
+                    Close={() => this.setState({showModal: false})}
                   />
                 </div>
     return (
@@ -84,7 +84,7 @@ export default class Pano extends Component {
             pitch={11}
             yaw={-167}
             text="more details"
-            handleClick={(evt, args) => { this.handleDetailsClick(); }}
+            handleClick={(evt, args) => { this.handleDetailsClick(evt); }}
             handleClickArg={{ "id": 1 }}
           />
           <Pannellum.Hotspot
