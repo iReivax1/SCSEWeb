@@ -49,10 +49,8 @@ export const ButtonContainer = styled.button`
 `;
 
 export const ButtonOverlay = styled.button`
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 30%);
+
+  transform: translate(-50%, 30%); 
   -ms-transform: translate(-50%, -50%);
   background-color: transparent;
   color: black;

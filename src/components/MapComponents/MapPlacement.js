@@ -11,7 +11,7 @@ export default class MapPlacement extends Component {
     super(props);
     this.state = {
       levelData: [{
-        btnNames: ["Lounge","SWL1","HWl1"],
+        btnNames: ["Lounge","SWL1","HWL1"],
         image: "/images/l1/mapLV1_a.jpg",
       },
       {

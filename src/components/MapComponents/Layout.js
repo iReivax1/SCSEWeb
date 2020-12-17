@@ -14,45 +14,55 @@ export default class Layout extends Component {
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
     }
-    componentDidMount(){
+    componentDidMount() {
     }
     handleToggleClick(event) {
-        if (event.target.id === "Lounge"){
+        if (event.target.id === "Lounge") {
             this.setState({
                 showPano: true,
                 pano_img: '/images/l1/lounge.jpg'
-              });
+            });
         }
-        else if (event.target.id === "SWL1"){
+        else if (event.target.id === "SWL1") {
             this.setState({
                 showPano: true,
                 pano_img: '/images/l1/swlab1/sw1_1.jpg'
-              });
+            });
         }
-        else if (event.target.id === "HWl1"){
+        else if (event.target.id === "HWl1") {
             this.setState({
                 showPano: true,
                 pano_img: '/images/l1/hwlab2/hw2_2.jpg'
-              });
+            });
         }
-      }
+    }
     render() {
-        
+
+
         this.items = this.props.levelData.map((item) =>
             <div className='container'>
-            {item.btnNames.map((btnName)=><ButtonOverlay id={btnName} onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>)}
-            <img src={item.image}/>
+                {item.btnNames.map(
+                    (btnName) => <span >
+                        
+                        {(btnName === "Lounge" || btnName === "HPL") ? 
+                        <ButtonOverlay className='first' id={btnName} onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWL1") ?
+                        <ButtonOverlay className='third' id={btnName} onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : 
+                        <ButtonOverlay className='second' id={btnName} onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                        }
+
+                    </span>)}
+                <img src={item.image} />
             </div>
         );
         let loadLayout = <ImageScroller>{this.items}</ImageScroller>
         let loadPano = <div className='layout-container'><Pano pano_img={this.state.pano_img}></Pano> </div>
-        
-        
+
+
         return (
             <div>
-            {
-                (this.state.showPano) ? loadPano : loadLayout
-            }
+                {
+                    (this.state.showPano) ? loadPano : loadLayout
+                }
             </div>
         )
     }
