@@ -25,7 +25,7 @@ function Footer() {
           </form>
         </div>
       </section> */}
-      <div class='footer-links'>
+      <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>About Us</h2>
@@ -61,7 +61,7 @@ function Footer() {
           <small className='website-rights'>School of computing science and engineering</small>
           <div className='social-icons'>
             <Link
-              class='social-icon-link facebook'
+              className='social-icon-link facebook'
               to={{ pathname: "https://www.facebook.com/scse.ntu" }}
               target='_blank'
               aria-label='Facebook'
@@ -69,7 +69,7 @@ function Footer() {
               <i className='fab fa-facebook-f' />
             </Link>
             <Link
-              class='social-icon-link instagram'
+                className='social-icon-link instagram'
               to={{ pathname: "https://www.instagram.com/scse_ntu/" }} 
               target='_blank'
               aria-label='Instagram'
@@ -77,7 +77,7 @@ function Footer() {
               <i className='fab fa-instagram' />
             </Link>
             <Link
-              class='social-icon-link youtube'
+                className='social-icon-link youtube'
               to={{ pathname: "https://www.youtube.com/user/SCEMarketing" }}
               target='_blank'
               aria-label='Youtube'
@@ -85,7 +85,7 @@ function Footer() {
               <i className='fab fa-youtube' />
             </Link>
             <Link
-              class='social-icon-link twitter'
+                className='social-icon-link twitter'
               to={{pathname:'https://www.linkedin.com/in/scse-ntu/'}}
               target='_blank'
               aria-label='LinkedIn'
