@@ -29,7 +29,7 @@ export default class Layout extends Component {
                 pano_img: '/images/l1/swlab1/sw1_1.jpg'
             });
         }
-        else if (event.target.id === "HWl1") {
+        else if (event.target.id === "HWL1") {
             this.setState({
                 showPano: true,
                 pano_img: '/images/l1/hwlab2/hw2_2.jpg'
@@ -51,7 +51,7 @@ export default class Layout extends Component {
                         }
 
                     </span>)}
-                <img src={item.image} />
+                <img src={item.image} alt={''}/>
             </div>
         );
         let loadLayout = <ImageScroller>{this.items}</ImageScroller>
