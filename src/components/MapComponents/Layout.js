@@ -28,12 +28,12 @@ export default class Layout extends Component {
         } else if (event.target.id === "SWL1") {
             this.setState({
                 showPano: true,
-                pano_img: '/images/l1/swlab1/sw1_1.jpg'
+                pano_img: '/images/l1/swlab1/swlab1_1.jpg'
             });
         } else if (event.target.id === "HWL1") {
             this.setState({
                 showPano: true,
-                pano_img: '/images/l1/hwlab2/hw2_2.jpg'
+                pano_img: '/images/l1/hwlab2/hwlab2_2.jpg'
             });
         }
     }
