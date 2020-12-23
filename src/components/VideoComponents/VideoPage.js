@@ -7,8 +7,8 @@ export default class VideoPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <VideoPlacement></VideoPlacement>
-                <Footer></Footer>
+                <VideoPlacement/>
+                <Footer/>
             </React.Fragment>
         )
     }

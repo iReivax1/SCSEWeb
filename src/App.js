@@ -12,7 +12,7 @@ import CoursesHome from './components/Courses/CoursesHome';
 function App() {
     return (
         <Router>
-            <Navbar></Navbar>
+            <Navbar/>
             <Switch>
                 <Route path='/' exact component={Home}/>
                 <Route path='/maps' exact component={Maps}/>

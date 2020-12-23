@@ -5,7 +5,7 @@ import Footer from '../Footer';
 function CoursesHome() {
     return (
         <>
-            <Cards></Cards>
+            <Cards/>
             <Footer/>
         </>
     )
