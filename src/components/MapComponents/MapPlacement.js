@@ -52,11 +52,21 @@ export default class MapPlacement extends Component {
   }
   handleClick_l2 = () => {
     this.setState({
-      layoutImage: ["/images/l2/mapLV2.jpg", '/images/img-home.jpg'],
-      level: "2"
-    }
+          levelData: [{
+            btnNames: [],
+            image: "/images/l2/mapL2a.jpg",
+          },
+            {
+              btnNames: [],
+              image: "/images/l2/mapL2b.jpg",
+            },
+            {
+              btnNames: [],
+              image: "/images/l2/mapL2c.jpg",
+            }],
+          level: "2"
+        }
     )
-
   }
   handleClick_b1 = () => {
     this.setState({
@@ -67,21 +77,21 @@ export default class MapPlacement extends Component {
   }
   handleClick_b2 = () => {
     this.setState({
-      layoutImage: ['/images/l2/mapLV2.jpg'],
+      layoutImage: ['/images/img-home.jpg'],
       level: 'b2'
     }
     )
   }
   handleClick_b3 = () => {
     this.setState({
-      layoutImage: ['/images/l2/mapLV2.jpg'],
+      layoutImage: ['/images/img-home.jpg'],
       level: 'b3'
     }
     )
   }
   handleClick_b4 = () => {
     this.setState({
-      layoutImage: ['/images/l2/mapLV2.jpg'],
+      layoutImage: ['/images/img-home.jpg'],
       level: 'b4'
     }
     )
@@ -92,9 +102,9 @@ export default class MapPlacement extends Component {
     return (
       <React.Fragment >
         <div className='layout-container'>
-          <Layout levelData={this.state.levelData} level={this.state.level}></Layout>
+          <Layout levelData={this.state.levelData} level={this.state.level}/>
         </div>
-        <ButtonContainer onClick={() => { this.handleClick_l2(); console.log(this.state.layoutImage) }}>
+        <ButtonContainer onClick={() => this.handleClick_l2()}>
           Level 2
         </ButtonContainer>
         <ButtonContainer onClick={() => this.handleClick_l1()}>
