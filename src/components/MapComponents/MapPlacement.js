@@ -10,15 +10,15 @@ export default class MapPlacement extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Lounge", "SWL1", "HWL1"],
+                btnNames: ["Lounge", "SWLab1", "HWLab1"],
                 image: "/images/l1/mapL1a.jpg",
             },
                 {
-                    btnNames: ["HWL2"],
+                    btnNames: ["HWLab2"],
                     image: "/images/l1/mapL1b.jpg",
                 },
                 {
-                    btnNames: ["SWL2", "HPL"],
+                    btnNames: ["SWLab2", "HPL"],
                     image: "/images/l1/mapL1c.jpg",
                 }],
             yaww: 180,
@@ -34,15 +34,15 @@ export default class MapPlacement extends Component {
     handleClick_l1 = () => {
         this.setState({
                 levelData: [{
-                    btnNames: ["Lounge", "SWL1", "HWL1"],
+                    btnNames: ["Lounge", "SWLab1", "HWLab1"],
                     image: "/images/l1/mapL1a.jpg",
                 },
                     {
-                        btnNames: ["HWL2"],
+                        btnNames: ["HWLab2"],
                         image: "/images/l1/mapL1b.jpg",
                     },
                     {
-                        btnNames: ["SWL2", "HPL"],
+                        btnNames: ["SWLab2", "HPL"],
                         image: "/images/l1/mapL1c.jpg",
                     }],
                 level: "1"

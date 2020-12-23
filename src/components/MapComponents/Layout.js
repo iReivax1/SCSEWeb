@@ -20,21 +20,43 @@ export default class Layout extends Component {
     }
 
     handleToggleClick(event) {
-        if (event.target.id === "Lounge") {
-            this.setState({
-                showPano: true,
-                pano_img: '/images/l1/lounge.jpg'
-            });
-        } else if (event.target.id === "SWL1") {
-            this.setState({
-                showPano: true,
-                pano_img: '/images/l1/swlab1/swlab1_1.jpg'
-            });
-        } else if (event.target.id === "HWL1") {
-            this.setState({
-                showPano: true,
-                pano_img: '/images/l1/hwlab2/hwlab2_2.jpg'
-            });
+        switch (event.target.id) {
+            case "Lounge":
+                this.setState({
+                    showPano: true,
+                    pano_img: '/images/l1/lounge.jpg'
+                });
+                break;
+            case "SWLab1":
+                this.setState({
+                    showPano: true,
+                    pano_img: '/images/l1/swlab1/swlab1_1.jpg'
+                });
+                break;
+            case "HWLab1":
+                this.setState({
+                    showPano: true,
+                    pano_img: '/images/l1/hwlab1/hwlab1_2.jpg'
+                });
+                break;
+            case "HWLab2":
+                this.setState({
+                    showPano: true,
+                    pano_img: '/images/l1/hwlab2/hwlab2_2.jpg'
+                });
+                break;
+            case "HPL":
+                this.setState({
+                    showPano: true,
+                    pano_img: '/images/l1/hpl/hpl_2.jpg'
+                });
+                break;
+            case "SWLab2":
+                this.setState({
+                    showPano: true,
+                    pano_img: '/images/l1/swlab2/swlab2_2.jpg'
+                });
+                break;
         }
     }
 
@@ -48,7 +70,7 @@ export default class Layout extends Component {
                         
                         {(btnName === "Lounge" || btnName === "HPL") ?
                             <ButtonOverlay className='first' id={btnName}
-                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWL1") ?
+                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWLab1") ?
                                 <ButtonOverlay className='third' id={btnName}
                                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> :
                                 <ButtonOverlay className='second' id={btnName}
