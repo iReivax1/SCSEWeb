@@ -1,13 +1,13 @@
 .container {
-  position: relative;
-  width: 50%;
-  background-color: white;
+    position: relative;
+    width: 50%;
+    background-color: white;
 }
 
 /* Make the image responsive */
 .container img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 /* .grid-container {
@@ -34,19 +34,19 @@
 } */
 
 .first {
-  position: absolute;
-  top: 40%;
-  left: 30%;
+    position: absolute;
+    top: 40%;
+    left: 30%;
 }
 
-.second{
-  position: absolute;
-  top: 40%;
-  left: 50%;
+.second {
+    position: absolute;
+    top: 40%;
+    left: 50%;
 }
 
-.third{
-  position: absolute;
-  top: 40%;
-  left: 80%;
+.third {
+    position: absolute;
+    top: 40%;
+    left: 80%;
 }
