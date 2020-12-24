@@ -9,7 +9,7 @@
     z-index: 1;
 } */
 
-/* .pnlm-controls {
+.pnlm-controls {
     margin-bottom: 4px;
     background-color: #fff;
     border: 1px solid #999;
@@ -20,4 +20,4 @@
     
     -webkit-transform: translateZ(9999px);
     transform: translateZ(9999px);
-} */
+}
