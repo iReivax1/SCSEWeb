@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ImageScroller from 'react-image-scroller';
 import './Layout.css'
-import { ButtonOverlay } from '../Button';
+import {ButtonOverlay} from '../Button';
 import Pano from './Pano'
 
 export default class Layout extends Component {
@@ -17,15 +17,16 @@ export default class Layout extends Component {
     }
 
     componentDidMount() {
-        
+
     }
 
     componentWillUnmount() {
-        
+
     }
+
     stopPano() {
-        this.setState({ showPano: false });
-      }
+        this.setState({showPano: false});
+    }
 
     handleToggleClick(event) {
         switch (event.target.id) {
@@ -65,6 +66,8 @@ export default class Layout extends Component {
                     pano_img: '/images/l1/swlab2/swlab2_2.jpg'
                 });
                 break;
+            default:
+                break;
         }
     }
 
@@ -78,19 +81,19 @@ export default class Layout extends Component {
 
                         {(btnName === "Lounge" || btnName === "HPL") ?
                             <ButtonOverlay className='first' id={btnName}
-                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWLab1") ?
+                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWLab1") ?
                                 <ButtonOverlay className='third' id={btnName}
-                                    onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> :
+                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> :
                                 <ButtonOverlay className='second' id={btnName}
-                                    onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
-                <img src={item.image} alt={''} />
+                <img src={item.image} alt={''}/>
             </div>
         );
         let loadLayout = <ImageScroller>{this.items}</ImageScroller>
-        let loadPano = <div className='layout-container'><Pano pano_img={this.state.pano_img} /></div>
+        let loadPano = <div className='layout-container'><Pano pano_img={this.state.pano_img}/></div>
 
 
         return (

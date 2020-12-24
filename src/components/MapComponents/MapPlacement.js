@@ -102,9 +102,9 @@ export default class MapPlacement extends Component {
         return (
             <React.Fragment>
                 <div className='layout-container'>
-                    <Layout levelData={this.state.levelData} level={this.state.level} ref={this.changePanoLayout} />
+                    <Layout levelData={this.state.levelData} level={this.state.level} ref={this.changePanoLayout}/>
                 </div>
-                <ButtonContainer onClick={() => this.handleClick_l2()} >
+                <ButtonContainer onClick={() => this.handleClick_l2()}>
                     Level 2
                 </ButtonContainer>
                 <ButtonContainer onClick={() => this.handleClick_l1()}>
