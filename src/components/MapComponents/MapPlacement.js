@@ -26,7 +26,7 @@ export default class MapPlacement extends Component {
             author: "SCSE",
             level: 1,
         };
-        this.ref = React.createRef();
+        this.changePanoLayout = React.createRef();
         this.handleClick_l1 = this.handleClick_l1.bind(this);
         this.handleClick_l2 = this.handleClick_l2.bind(this);
     }
@@ -66,6 +66,7 @@ export default class MapPlacement extends Component {
                 level: "2"
             }
         )
+        this.changePanoLayout.current.stopPano()
     }
     handleClick_b1 = () => {
         this.setState({
@@ -101,9 +102,9 @@ export default class MapPlacement extends Component {
         return (
             <React.Fragment>
                 <div className='layout-container'>
-                    <Layout levelData={this.state.levelData} level={this.state.level}/>
+                    <Layout levelData={this.state.levelData} level={this.state.level} ref={this.changePanoLayout} />
                 </div>
-                <ButtonContainer onClick={() => this.handleClick_l2()}>
+                <ButtonContainer onClick={() => this.handleClick_l2()} >
                     Level 2
                 </ButtonContainer>
                 <ButtonContainer onClick={() => this.handleClick_l1()}>
