@@ -5,7 +5,8 @@
 }
 
 /* Make the image responsive */
-.container img {
+.scrollcontainer {
+  position: relative;
   width: 100%;
   height: auto;
 }

@@ -54,7 +54,7 @@ export default class Layout extends Component {
                 <img src={item.image} />
             </div>
         );
-        let loadLayout = <ImageScroller>{this.items}</ImageScroller>
+        let loadLayout = <ImageScroller className="scrollcontainer">{this.items}</ImageScroller>
         let loadPano = <div className='layout-container'><Pano pano_img={this.state.pano_img}></Pano> </div>
 
 
