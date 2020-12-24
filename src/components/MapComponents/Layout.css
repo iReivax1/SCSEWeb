@@ -1,14 +1,20 @@
 .container {
-  position: relative;
-  width: 50%;
-  background-color: white;
+    position: relative;
+    width: 50%;
+    background-color: white;
 }
 
 /* Make the image responsive */
+<<<<<<< HEAD
 .scrollcontainer {
   position: relative;
   width: 100%;
   height: auto;
+=======
+.container img {
+    width: 100%;
+    height: auto;
+>>>>>>> 8dd70d5f4508626470e39c308aae4b482c73d08e
 }
 
 /* .grid-container {
@@ -35,19 +41,19 @@
 } */
 
 .first {
-  position: absolute;
-  top: 40%;
-  left: 30%;
+    position: absolute;
+    top: 40%;
+    left: 30%;
 }
 
-.second{
-  position: absolute;
-  top: 40%;
-  left: 50%;
+.second {
+    position: absolute;
+    top: 40%;
+    left: 50%;
 }
 
-.third{
-  position: absolute;
-  top: 40%;
-  left: 80%;
+.third {
+    position: absolute;
+    top: 40%;
+    left: 80%;
 }
