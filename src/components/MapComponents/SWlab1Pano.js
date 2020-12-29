@@ -1,40 +1,19 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import {Pannellum} from "pannellum-react";
 import {ProductContext} from '../../Context';
 import "./Pano.css"
 import ReactJsAlert from "reactjs-alert";
 
-export default class Pano extends Component {
+export default class SWlab1Pano extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pano_img: this.props.pano_img,
+            pano_img: '/images/l1/swlab1/swlab1_1.jpg',
             showModal: false,
             status: true,
             title: "Psss. Did you know?",
-            quote: "This is a computer",
+            quote: "This is software lab",
         };
-    }
-
-    componentDidMount() {
-        this.setPanoImage();
-    }
-
-    setPanoImage = () => {
-        this.setState({
-                pano_img: this.props.pano_img
-            }
-        );
-    }
-    handleHotSpotClick = () => {
-        this.setState({
-            pano_img: "/images/l1/swlab1/swlab1_1.jpg",
-        });
-    };
-    handleDetailsClick = (e) => {
-        this.setState({
-            showModal: true
-        })
     }
 
     render() {
@@ -44,7 +23,7 @@ export default class Pano extends Component {
                 title={this.state.title}
                 status={this.state.status}
                 quote={this.state.quote}
-                Close={() => this.setState({showModal: false})}
+                Close={() => this.setState({ showModal: false })}
             />
         </div>
         return (
@@ -107,7 +86,7 @@ export default class Pano extends Component {
                         handleClick={(evt, args) => {
                             this.handleDetailsClick(evt);
                         }}
-                        handleClickArg={{"id": 1}}
+                        handleClickArg={{ "id": 1 }}
                     />
                     <Pannellum.Hotspot
                         type="custom"
@@ -126,9 +105,6 @@ export default class Pano extends Component {
 
                 </Pannellum>
             </div>
-
         )
     }
 }
-Pano.contextType = ProductContext;
-
