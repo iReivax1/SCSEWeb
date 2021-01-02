@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import ImageScroller from 'react-image-scroller';
 import './Layout.css'
-import { ButtonOverlay } from '../Button';
-import Pano from './Pano'
+import {ButtonOverlay} from '../Button';
 import HWlab1Pano from './HWlab1Pano'
 import SWlab1Pano from './SWlab1Pano';
 import LoungePano from './LoungePano';
@@ -16,7 +15,7 @@ export default class Layout extends Component {
             showPano: false,
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
-        
+
         this.childPano = <LoungePano/>
     }
 
@@ -29,11 +28,11 @@ export default class Layout extends Component {
     }
 
     stopPano() {
-        this.setState({ showPano: false });
+        this.setState({showPano: false});
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {"HWLab1": <HWlab1Pano/>, "SWLab1": <SWlab1Pano/>, "Lounge": <LoungePano/> }
+        const childPanoMap = {"HWLab1": <HWlab1Pano/>, "SWLab1": <SWlab1Pano/>, "Lounge": <LoungePano/>}
         switch (event.target.id) {
             case "Lounge":
                 this.setState({
@@ -80,7 +79,7 @@ export default class Layout extends Component {
     }
 
     render() {
-        
+
 
         this.items = this.props.levelData.map((item) =>
             <div className='container'>
@@ -88,15 +87,15 @@ export default class Layout extends Component {
                     (btnName) => <span>
                         {(btnName === "Lounge" || btnName === "HPL") ?
                             <ButtonOverlay className='first' id={btnName}
-                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWLab1") ?
+                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWLab1") ?
                                 <ButtonOverlay className='third' id={btnName}
-                                    onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> :
+                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> :
                                 <ButtonOverlay className='second' id={btnName}
-                                    onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
-                <img src={item.image} alt={''} />
+                <img src={item.image} alt={''}/>
             </div>
         );
         let loadLayout = <ImageScroller>{this.items}</ImageScroller>

@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { Pannellum } from "pannellum-react";
-import { ProductContext } from '../../Context';
+import React, {Component} from 'react';
+import {Pannellum} from "pannellum-react";
 import "./Pano.css"
 import ReactJsAlert from "reactjs-alert";
 
@@ -16,13 +15,14 @@ export default class SWlab1Pano extends Component {
             quote: "This is a computer",
         };
     }
+
     handleHotSpotClick_exit = () => {
         window.location.reload();
     };
     setPanoImage = () => {
         this.setState({
-            pano_img: this.props.pano_img
-        }
+                pano_img: this.props.pano_img
+            }
         );
     }
     handleHotSpotClick_next = () => {
@@ -44,11 +44,11 @@ export default class SWlab1Pano extends Component {
                 title={this.state.title}
                 status={this.state.status}
                 quote={this.state.quote}
-                Close={() => this.setState({ showModal: false })}
+                Close={() => this.setState({showModal: false})}
             />
         </div>
         let pano = null
-        if (this.state.page == 1) {
+        if (this.state.page === 1) {
             pano = <Pannellum
                 width="100%"
                 height="100vh"
@@ -106,7 +106,7 @@ export default class SWlab1Pano extends Component {
                     handleClick={(evt, args) => {
                         this.handleDetailsClick(args.id);
                     }}
-                    handleClickArg={() => this.state.showDetails ? { "id": 1 } : { "id": 2 }}
+                    handleClickArg={() => this.state.showDetails ? {"id": 1} : {"id": 2}}
                 />
                 {/* exit hotspot */}
                 <Pannellum.Hotspot
@@ -139,8 +139,7 @@ export default class SWlab1Pano extends Component {
                     }}
                 />
             </Pannellum>
-        }
-        else {
+        } else {
             pano = <Pannellum
                 width="100%"
                 height="100vh"

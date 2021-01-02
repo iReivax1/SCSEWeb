@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import {Pannellum} from "pannellum-react";
-import {ProductContext} from '../../Context';
 import "./Pano.css"
 import ReactJsAlert from "reactjs-alert";
 
@@ -15,6 +14,7 @@ export default class LoungePano extends Component {
             quote: "This is the lounge",
         };
     }
+
     handleHotSpotClick = () => {
         // this.setState({
         //     pano_img: "/images/l1/swlab1/swlab1_1.jpg",
@@ -29,7 +29,7 @@ export default class LoungePano extends Component {
                 title={this.state.title}
                 status={this.state.status}
                 quote={this.state.quote}
-                Close={() => this.setState({ showModal: false })}
+                Close={() => this.setState({showModal: false})}
             />
         </div>
         return (
