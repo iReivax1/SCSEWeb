@@ -10,15 +10,17 @@ export default class LoungePano extends Component {
             pano_img: "/images/l1/lounge.jpg",
             showModal: false,
             status: true,
-            title: "Psss. Did you know?",
-            quote: "This is the lounge",
+            title: "SCSE Lounge",
+            quote: "The birthplace of this map.",
         };
     }
 
+    handleDetailsClick = () => {
+        this.setState({
+            showModal: true
+        })
+    }
     handleHotSpotClick = () => {
-        // this.setState({
-        //     pano_img: "/images/l1/swlab1/swlab1_1.jpg",
-        // });
         window.location.reload();
     };
 
@@ -86,6 +88,16 @@ export default class LoungePano extends Component {
                 >
                     <Pannellum.Hotspot
                         type="custom"
+                        pitch={-1.2563407235867086}
+                        yaw={-61.335068056254386}
+                        text="more details"
+                        handleClick={(evt) => {
+                            this.handleDetailsClick(evt);
+                        }}
+                        handleClickArg={{"id": 1}}
+                    />
+                    <Pannellum.Hotspot
+                        type="custom"
                         pitch={-2.2769009933894475}
                         yaw={-168.3412799816285}
                         handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
@@ -98,7 +110,6 @@ export default class LoungePano extends Component {
                             console.log(hotSpotDiv)
                         }}
                     />
-
                     <Pannellum.Hotspot
                         type="custom"
                         pitch={-3.202923678321035}
@@ -113,7 +124,6 @@ export default class LoungePano extends Component {
                             console.log(hotSpotDiv)
                         }}
                     />
-
                 </Pannellum>
             </div>
         )
