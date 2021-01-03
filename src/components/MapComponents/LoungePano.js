@@ -107,7 +107,7 @@ export default class LoungePano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            console.log(hotSpotDiv)
+                            //console.log(hotSpotDiv)
                         }}
                     />
                     <Pannellum.Hotspot
@@ -121,7 +121,7 @@ export default class LoungePano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            console.log(hotSpotDiv)
+                            //console.log(hotSpotDiv)
                         }}
                     />
                 </Pannellum>
