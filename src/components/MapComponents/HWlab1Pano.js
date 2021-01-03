@@ -15,6 +15,12 @@ export default class HWlab1Pano extends Component {
         };
     }
 
+    handleDetailsClick = () => {
+        this.setState({
+            showModal: true
+        })
+    }
+
     render() {
         let alert = <div className="App">
             <ReactJsAlert
@@ -48,7 +54,7 @@ export default class HWlab1Pano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    onLoad={() => {
+                    /*onLoad={() => {
                         console.log("panorama loaded");
                     }}
                     onScenechange={(id) => {
@@ -74,7 +80,7 @@ export default class HWlab1Pano extends Component {
                     }}
                     onTouchend={(evt) => {
                         console.log("Touch End", evt);
-                    }}
+                    }}*/
                     hotspotDebug={false}
                 >
                     <Pannellum.Hotspot
@@ -82,17 +88,17 @@ export default class HWlab1Pano extends Component {
                         pitch={11}
                         yaw={-167}
                         text="more details"
-                        handleClick={(evt, args) => {
+                        handleClick={(evt) => {
                             this.handleDetailsClick(evt);
                         }}
                         handleClickArg={{"id": 1}}
                     />
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-10}
-                        yaw={180}
+                        pitch={-5}
+                        yaw={20}
                         handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
-                        tooltip={(hotSpotDiv, args) => {
+                        tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
                             imageDiv.setAttribute('width', '45');
                             imageDiv.setAttribute('height', '45');
