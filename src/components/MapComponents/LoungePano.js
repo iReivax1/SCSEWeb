@@ -86,10 +86,25 @@ export default class LoungePano extends Component {
                 >
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-4.603722991783871}
-                        yaw={-171.247823510957}
+                        pitch={-2.2769009933894475}
+                        yaw={-168.3412799816285}
                         handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
-                        tooltip={(hotSpotDiv, args) => {
+                        tooltip={(hotSpotDiv) => {
+                            const imageDiv = document.createElement('img');
+                            imageDiv.setAttribute('width', '45');
+                            imageDiv.setAttribute('height', '45');
+                            imageDiv.setAttribute('src', '/images/up.png')
+                            hotSpotDiv.appendChild(imageDiv);
+                            console.log(hotSpotDiv)
+                        }}
+                    />
+
+                    <Pannellum.Hotspot
+                        type="custom"
+                        pitch={-3.202923678321035}
+                        yaw={-18.332900974592143}
+                        handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
+                        tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
                             imageDiv.setAttribute('width', '45');
                             imageDiv.setAttribute('height', '45');
