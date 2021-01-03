@@ -81,17 +81,18 @@ export default class Layout extends Component {
     render() {
 
 
-        this.items = this.props.levelData.map((item) =>
-            <div className='container'>
+        this.items = this.props.levelData.map((item, i) =>
+            <div className='container' key={i}>
                 {item.btnNames.map(
-                    (btnName) => <span>
+                    (btnName, j) => <span key={j}>
                         {(btnName === "Lounge" || btnName === "HPL") ?
                             <ButtonOverlay className='first' id={btnName}
-                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> : (btnName === "HWLab1") ?
+                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                            : (btnName === "HWLab1") ?
                                 <ButtonOverlay className='third' id={btnName}
-                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay> :
-                                <ButtonOverlay className='second' id={btnName}
                                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                : <ButtonOverlay className='second' id={btnName}
+                                                 onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
