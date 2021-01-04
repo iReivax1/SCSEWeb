@@ -16,15 +16,16 @@ export default class SWlab1Pano extends Component {
         };
     }
 
-    handleHotSpotClick_exit = () => {
-        window.location.reload();
-    };
     setPanoImage = () => {
         this.setState({
                 pano_img: this.props.pano_img
             }
         );
     }
+
+    handleHotSpotClick_exit = () => {
+        window.location.reload();
+    };
     handleHotSpotClick = (number) => {
         this.setState({
             pano_img: "/images/l1/swlab1/swlab1_" + number + ".jpg",
@@ -99,7 +100,6 @@ export default class SWlab1Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
                         }}
                     />
                 </Pannellum>
@@ -139,7 +139,6 @@ export default class SWlab1Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
                         }}
                     />
                     {/*Left Room*/}
@@ -154,7 +153,6 @@ export default class SWlab1Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
                         }}
                     />
                 </Pannellum>
@@ -192,21 +190,6 @@ export default class SWlab1Pano extends Component {
                         }}
                         handleClickArg={() => this.state.showDetails ? {"id": 1} : {"id": 2}}
                     />
-                    {/*Back of Room*/}
-                    <Pannellum.Hotspot
-                        type="custom"
-                        pitch={-1.3742567001186587}
-                        yaw={155.0526910462787}
-                        handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
-                        tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
-                            hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
-                        }}
-                    />
                     {/*Left Exit*/}
                     <Pannellum.Hotspot
                         type="custom"
@@ -219,7 +202,20 @@ export default class SWlab1Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
+                        }}
+                    />
+                    {/*Back of Room*/}
+                    <Pannellum.Hotspot
+                        type="custom"
+                        pitch={-1.3742567001186587}
+                        yaw={155.0526910462787}
+                        handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
+                        tooltip={(hotSpotDiv) => {
+                            const imageDiv = document.createElement('img');
+                            imageDiv.setAttribute('width', '45');
+                            imageDiv.setAttribute('height', '45');
+                            imageDiv.setAttribute('src', '/images/up.png')
+                            hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
                 </Pannellum>
