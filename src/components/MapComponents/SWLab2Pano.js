@@ -12,7 +12,7 @@ export default class SWlab2Pano extends Component {
             status: true,
             page: 1,
             title: "Psss. Did you know?",
-            quote: "This is someone's leg!",
+            quote: "This is a sign!",
         };
     }
 
@@ -72,11 +72,21 @@ export default class SWlab2Pano extends Component {
                     showZoomCtrl
                     hotspotDebug={false}
                 >
-                    {/*Right Exit*/}
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-0.3241583554547378}
-                        yaw={154.8956198483586}
+                        pitch={-4.022015907635136}
+                        yaw={5.520010903511699}
+                        text="more details"
+                        handleClick={(evt, args) => {
+                            this.handleDetailsClick(args.id);
+                        }}
+                        handleClickArg={() => this.state.showDetails ? {"id": 1} : {"id": 2}}
+                    />
+                    {/*Exit*/}
+                    <Pannellum.Hotspot
+                        type="custom"
+                        pitch={-4.022015907635136}
+                        yaw={172.87896444170997}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
@@ -84,7 +94,34 @@ export default class SWlab2Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
+                        }}
+                    />
+                    {/*Right Room*/}
+                    <Pannellum.Hotspot
+                        type="custom"
+                        pitch={-4.022015907635136}
+                        yaw={48.23870234930946}
+                        handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
+                        tooltip={(hotSpotDiv) => {
+                            const imageDiv = document.createElement('img');
+                            imageDiv.setAttribute('width', '45');
+                            imageDiv.setAttribute('height', '45');
+                            imageDiv.setAttribute('src', '/images/up.png')
+                            hotSpotDiv.appendChild(imageDiv);
+                        }}
+                    />
+                    {/*Left Room*/}
+                    <Pannellum.Hotspot
+                        type="custom"
+                        pitch={-4.022015907635136}
+                        yaw={-21.19262646894962}
+                        handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
+                        tooltip={(hotSpotDiv) => {
+                            const imageDiv = document.createElement('img');
+                            imageDiv.setAttribute('width', '45');
+                            imageDiv.setAttribute('height', '45');
+                            imageDiv.setAttribute('src', '/images/up.png')
+                            hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
                 </Pannellum>
@@ -112,11 +149,11 @@ export default class SWlab2Pano extends Component {
                     showZoomCtrl
                     hotspotDebug={false}
                 >
-                    {/*Right Room*/}
+                    {/*Back of Room*/}
                     <Pannellum.Hotspot
                         type="custom"
                         pitch={-1.6530135741783307}
-                        yaw={40.62023844524556}
+                        yaw={22.089702236536656}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
@@ -124,22 +161,6 @@ export default class SWlab2Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
-                        }}
-                    />
-                    {/*Left Room*/}
-                    <Pannellum.Hotspot
-                        type="custom"
-                        pitch={-1.6530135741783307}
-                        yaw={-32.95586240234637}
-                        handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
-                        tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
-                            hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
                         }}
                     />
                 </Pannellum>
@@ -167,36 +188,11 @@ export default class SWlab2Pano extends Component {
                     showZoomCtrl
                     hotspotDebug={false}
                 >
-                    <Pannellum.Hotspot
-                        type="custom"
-                        pitch={-39.20509767578132}
-                        yaw={-138.75883211675185}
-                        text="more details"
-                        handleClick={(evt, args) => {
-                            this.handleDetailsClick(args.id);
-                        }}
-                        handleClickArg={() => this.state.showDetails ? {"id": 1} : {"id": 2}}
-                    />
-                    {/*Back of Room*/}
-                    {/* <Pannellum.Hotspot
-                        type="custom"
-                        pitch={-1.3742567001186587}
-                        yaw={155.0526910462787}
-                        handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
-                        tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
-                            hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
-                        }}
-                    /> */}
                     {/*Left Exit*/}
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={0.21009648743278103}
-                        yaw={-32.95586240234637}
+                        pitch={-0.9850799241717226}
+                        yaw={-21.987913157028025}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
@@ -204,7 +200,20 @@ export default class SWlab2Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            //console.log(hotSpotDiv)
+                        }}
+                    />
+                    {/*Back of Room*/}
+                    <Pannellum.Hotspot
+                        type="custom"
+                        pitch={-0.9850799241717226}
+                        yaw={149.92208870518564}
+                        handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
+                        tooltip={(hotSpotDiv) => {
+                            const imageDiv = document.createElement('img');
+                            imageDiv.setAttribute('width', '45');
+                            imageDiv.setAttribute('height', '45');
+                            imageDiv.setAttribute('src', '/images/up.png')
+                            hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
                 </Pannellum>

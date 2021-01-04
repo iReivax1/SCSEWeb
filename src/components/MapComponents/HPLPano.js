@@ -64,7 +64,7 @@ export default class HPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotDebug={false}
                 >
                     {/*Right Exit*/}
                     <Pannellum.Hotspot
@@ -159,7 +159,7 @@ export default class HPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotDebug={false}
                 >
                     <Pannellum.Hotspot
                         type="custom"
@@ -250,7 +250,7 @@ export default class HPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotDebug={false}
                 >
                     {/*Entrance*/}
                     <Pannellum.Hotspot
@@ -331,7 +331,7 @@ export default class HPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotDebug={false}
                 >
                     {/*Entrance*/}
                     <Pannellum.Hotspot
@@ -412,7 +412,7 @@ export default class HPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotDebug={false}
                 >
                     {/*Entrance*/}
                     <Pannellum.Hotspot
