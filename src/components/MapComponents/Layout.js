@@ -2,11 +2,11 @@ import React, {Component} from 'react'
 import ImageScroller from 'react-image-scroller';
 import './Layout.css'
 import {ButtonOverlay} from '../Button';
-import HWlab1Pano from './HWlab1Pano'
-import SWlab1Pano from './SWlab1Pano';
+import HWLab1Pano from './HWLab1Pano'
+import SWLab1Pano from './SWLab1Pano';
 import LoungePano from './LoungePano';
 import SWLab2Pano from './SWLab2Pano';
-import HWlab2Pano from './HWlab2Pano';
+import HWLab2Pano from './HWLab2Pano';
 import HPLPano from './HPLPano';
 
 export default class Layout extends Component {
@@ -36,11 +36,11 @@ export default class Layout extends Component {
 
     handleToggleClick(event) {
         const childPanoMap = {
-            "HWLab1": <HWlab1Pano/>,
-            "SWLab1": <SWlab1Pano/>,
+            "HWLab1": <HWLab1Pano/>,
+            "SWLab1": <SWLab1Pano/>,
             "Lounge": <LoungePano/>,
             "SWLab2": <SWLab2Pano/>,
-            "HWLab2": <HWlab2Pano/>,
+            "HWLab2": <HWLab2Pano/>,
             "HPL": <HPLPano/>
         }
         switch (event.target.id) {
