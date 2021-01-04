@@ -1,5 +1,5 @@
 import React from 'react'
-import MapPlacement from '../MapComponents/MapPlacement'
+import MapPlacement from '../map_components/MapPlacement'
 import Footer from '../Footer';
 
 function Maps() {

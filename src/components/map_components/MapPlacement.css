@@ -47,7 +47,6 @@ video {
 .hero-btns {
     margin-top: 32px;
     justify-content: flex-end;
-    position: 'absolute';
     bottom: 0;
     left: 0
 }
@@ -84,7 +83,6 @@ video {
 
     .btn {
         width: 100%;
-        position: 'absolute';
         bottom: 0;
         left: 0
     }
