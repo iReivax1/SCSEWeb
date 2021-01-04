@@ -133,6 +133,7 @@ export default class HWLab1Pano extends Component {
                     showZoomCtrl
                     hotspotDebug={false}
                 >
+                    {/*Entrance*/}
                     <Pannellum.Hotspot
                         type="custom"
                         pitch={-4.178066947800381}
@@ -144,7 +145,6 @@ export default class HWLab1Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            console.log(hotSpotDiv)
                         }}
                     />
                 </Pannellum>
@@ -182,6 +182,7 @@ export default class HWLab1Pano extends Component {
                         }}
                         handleClickArg={{"id": 1}}
                     />
+                    {/*Entrance*/}
                     <Pannellum.Hotspot
                         type="custom"
                         pitch={-5}
@@ -193,7 +194,6 @@ export default class HWLab1Pano extends Component {
                             imageDiv.setAttribute('height', '45');
                             imageDiv.setAttribute('src', '/images/up.png')
                             hotSpotDiv.appendChild(imageDiv);
-                            console.log(hotSpotDiv)
                         }}
                     />
 

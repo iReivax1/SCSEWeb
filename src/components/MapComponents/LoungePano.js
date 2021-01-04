@@ -20,7 +20,7 @@ export default class LoungePano extends Component {
             showModal: true
         })
     }
-    handleHotSpotClick = () => {
+    handleHotSpotClick_exit = () => {
         window.location.reload();
     };
 
@@ -71,9 +71,9 @@ export default class LoungePano extends Component {
                     />
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-2.2769009933894475}
+                        pitch={-2.5}
                         yaw={-168.3412799816285}
-                        handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
+                        handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
                             imageDiv.setAttribute('width', '45');
@@ -85,9 +85,9 @@ export default class LoungePano extends Component {
                     />
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-3.202923678321035}
+                        pitch={-2.5}
                         yaw={-18.332900974592143}
-                        handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
+                        handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
                             imageDiv.setAttribute('width', '45');
