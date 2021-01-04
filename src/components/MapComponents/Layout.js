@@ -5,6 +5,9 @@ import {ButtonOverlay} from '../Button';
 import HWlab1Pano from './HWlab1Pano'
 import SWlab1Pano from './SWlab1Pano';
 import LoungePano from './LoungePano';
+import SWLab2Pano from './SWLab2Pano';
+import HWlab2Pano from './HWlab2Pano';
+import HPLPano from './HPLPano';
 
 export default class Layout extends Component {
     constructor(props) {
@@ -32,7 +35,7 @@ export default class Layout extends Component {
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {"HWLab1": <HWlab1Pano/>, "SWLab1": <SWlab1Pano/>, "Lounge": <LoungePano/>}
+        const childPanoMap = {"HWLab1": <HWlab1Pano/>, "SWLab1": <SWlab1Pano/>, "Lounge": <LoungePano/>, "SWLab2" : <SWLab2Pano/>, "HWLab2" : <HWlab2Pano/>, "HPL" : <HPLPano/>}
         switch (event.target.id) {
             case "Lounge":
                 this.setState({
@@ -55,23 +58,20 @@ export default class Layout extends Component {
             case "HWLab2":
                 this.setState({
                     showPano: true,
-                    pano_img: '/images/l1/hwlab2/hwlab2_2.jpg',
-                    area: event.target.id
                 });
+                this.childPano = childPanoMap["HWLab2"]
                 break;
             case "HPL":
                 this.setState({
                     showPano: true,
-                    pano_img: '/images/l1/hpl/hpl_2.jpg',
-                    area: event.target.id
                 });
+                this.childPano = childPanoMap["HPL"]
                 break;
             case "SWLab2":
                 this.setState({
                     showPano: true,
-                    pano_img: '/images/l1/swlab2/swlab2_2.jpg',
-                    area: event.target.id
                 });
+                this.childPano = childPanoMap["SWLab2"]
                 break;
             default:
                 break;
