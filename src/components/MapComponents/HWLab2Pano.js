@@ -194,7 +194,7 @@ export default class HWLab2Pano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotDebug={false}
                 >
                     {/*Exit*/}
                     <Pannellum.Hotspot
