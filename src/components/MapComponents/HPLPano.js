@@ -7,7 +7,7 @@ export default class HPLPano extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pano_img: "/images/l1/hpl/hpl_1.jpg",
+            pano_img: "/images/l1/hpl/1.jpg",
             showModal: false,
             status: true,
             title: "Psss. Did you know?",

@@ -28,10 +28,10 @@ export default class Pano extends Component {
     }
     handleHotSpotClick = () => {
         this.setState({
-            pano_img: "/images/l1/swlab1/swlab1_1.jpg",
+            pano_img: "/images/l1/swlab1/1.jpg",
         });
     };
-    handleDetailsClick = (e) => {
+    handleDetailsClick = () => {
         this.setState({
             showModal: true
         })
@@ -104,7 +104,7 @@ export default class Pano extends Component {
                         pitch={11}
                         yaw={-167}
                         text="more details"
-                        handleClick={(evt, args) => {
+                        handleClick={(evt) => {
                             this.handleDetailsClick(evt);
                         }}
                         handleClickArg={{"id": 1}}
@@ -114,7 +114,7 @@ export default class Pano extends Component {
                         pitch={-10}
                         yaw={180}
                         handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
-                        tooltip={(hotSpotDiv, args) => {
+                        tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
                             imageDiv.setAttribute('width', '45');
                             imageDiv.setAttribute('height', '45');

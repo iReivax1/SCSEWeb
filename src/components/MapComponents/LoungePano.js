@@ -7,7 +7,7 @@ export default class LoungePano extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pano_img: "/images/l1/lounge.jpg",
+            pano_img: "/images/l1/lounge/1.jpg",
             showModal: false,
             status: true,
             title: "SCSE Lounge",
@@ -57,33 +57,6 @@ export default class LoungePano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    // onLoad={() => {
-                    //     console.log("panorama loaded");
-                    // }}
-                    // onScenechange={(id) => {
-                    //     console.log("Scene has change on " + id);
-                    // }}
-                    // onScenechangefadedone={() => {
-                    //     console.log("panorama loaded");
-                    // }}
-                    // onError={(err) => {
-                    //     console.log("Error", err);
-                    // }}
-                    // onErrorcleared={() => {
-                    //     console.log("Error Cleared");
-                    // }}
-                    // onMousedown={(evt) => {
-                    //     console.log("Mouse Down", evt);
-                    // }}
-                    // onMouseup={(evt) => {
-                    //     console.log("Mouse Up", evt);
-                    // }}
-                    // onTouchstart={(evt) => {
-                    //     console.log("Touch Start", evt);
-                    // }}
-                    // onTouchend={(evt) => {
-                    //     console.log("Touch End", evt);
-                    // }}
                     hotspotDebug={false}
                 >
                     <Pannellum.Hotspot

@@ -11,15 +11,15 @@ export default class MapPlacement extends Component {
         this.state = {
             levelData: [{
                 btnNames: ["Lounge", "SWLab1", "HWLab1"],
-                image: "/images/l1/mapL1a.jpg",
+                image: "/images/l1/map/a.jpg",
             },
                 {
                     btnNames: ["HWLab2"],
-                    image: "/images/l1/mapL1b.jpg",
+                    image: "/images/l1/map/b.jpg",
                 },
                 {
                     btnNames: ["SWLab2", "HPL"],
-                    image: "/images/l1/mapL1c.jpg",
+                    image: "/images/l1/map/c.jpg",
                 }],
             yaww: 180,
             updateText: "initial",
@@ -35,15 +35,15 @@ export default class MapPlacement extends Component {
         this.setState({
                 levelData: [{
                     btnNames: ["Lounge", "SWLab1", "HWLab1"],
-                    image: "/images/l1/mapL1a.jpg",
+                    image: "/images/l1/map/a.jpg",
                 },
                     {
                         btnNames: ["HWLab2"],
-                        image: "/images/l1/mapL1b.jpg",
+                        image: "/images/l1/map/b.jpg",
                     },
                     {
                         btnNames: ["SWLab2", "HPL"],
-                        image: "/images/l1/mapL1c.jpg",
+                        image: "/images/l1/map/c.jpg",
                     }],
                 level: "1"
             }
@@ -53,15 +53,15 @@ export default class MapPlacement extends Component {
         this.setState({
                 levelData: [{
                     btnNames: [],
-                    image: "/images/l2/mapL2a.jpg",
+                    image: "/images/l2/map/a.jpg",
                 },
                     {
                         btnNames: [],
-                        image: "/images/l2/mapL2b.jpg",
+                        image: "/images/l2/map/b.jpg",
                     },
                     {
                         btnNames: [],
-                        image: "/images/l2/mapL2c.jpg",
+                        image: "/images/l2/map/c.jpg",
                     }],
                 level: "2"
             }

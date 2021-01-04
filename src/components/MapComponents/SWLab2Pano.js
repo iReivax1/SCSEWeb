@@ -7,7 +7,7 @@ export default class SWlab2Pano extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pano_img: '/images/l1/swlab2/swlab2_1.jpg',
+            pano_img: '/images/l1/swlab2/1.jpg',
             showModal: false,
             status: true,
             page: 1,
@@ -27,7 +27,7 @@ export default class SWlab2Pano extends Component {
     }
     handleHotSpotClick = (number) => {
         this.setState({
-            pano_img: "/images/l1/swlab2/swlab2_" + number + ".jpg",
+            pano_img: "/images/l1/swlab2/" + number + ".jpg",
             page: number
         });
     };

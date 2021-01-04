@@ -35,7 +35,14 @@ export default class Layout extends Component {
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {"HWLab1": <HWlab1Pano/>, "SWLab1": <SWlab1Pano/>, "Lounge": <LoungePano/>, "SWLab2" : <SWLab2Pano/>, "HWLab2" : <HWlab2Pano/>, "HPL" : <HPLPano/>}
+        const childPanoMap = {
+            "HWLab1": <HWlab1Pano/>,
+            "SWLab1": <SWlab1Pano/>,
+            "Lounge": <LoungePano/>,
+            "SWLab2": <SWLab2Pano/>,
+            "HWLab2": <HWlab2Pano/>,
+            "HPL": <HPLPano/>
+        }
         switch (event.target.id) {
             case "Lounge":
                 this.setState({
