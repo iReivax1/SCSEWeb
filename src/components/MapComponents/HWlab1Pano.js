@@ -11,7 +11,7 @@ export default class HWlab1Pano extends Component {
             showModal: false,
             status: true,
             title: "Psss. Did you know?",
-            quote: "This is a drill",
+            quote: "This is a computer",
         };
     }
 
@@ -20,6 +20,9 @@ export default class HWlab1Pano extends Component {
             showModal: true
         })
     }
+    handleHotSpotClick_exit = () => {
+        window.location.reload();
+    };
 
     render() {
         let alert = <div className="App">
@@ -81,12 +84,12 @@ export default class HWlab1Pano extends Component {
                     onTouchend={(evt) => {
                         console.log("Touch End", evt);
                     }}*/
-                    hotspotDebug={false}
+                    hotspotDebug={true}
                 >
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={11}
-                        yaw={-167}
+                        pitch={-29.95374827688484}
+                        yaw={-160.85}
                         text="more details"
                         handleClick={(evt) => {
                             this.handleDetailsClick(evt);
@@ -97,7 +100,7 @@ export default class HWlab1Pano extends Component {
                         type="custom"
                         pitch={-5}
                         yaw={20}
-                        handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
+                        handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
                             const imageDiv = document.createElement('img');
                             imageDiv.setAttribute('width', '45');
