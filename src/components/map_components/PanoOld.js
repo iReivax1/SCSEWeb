@@ -4,7 +4,7 @@ import ReactJsAlert from "reactjs-alert";
 import {ProductContext} from "src/Context";
 import "./Pano.css";
 
-export default class Pano extends Component {
+export default class PanoOld extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -130,5 +130,5 @@ export default class Pano extends Component {
         );
     }
 }
-Pano.contextType = ProductContext;
+PanoOld.contextType = ProductContext;
 

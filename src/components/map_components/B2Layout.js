@@ -23,7 +23,6 @@ export default class B2Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 1,
             showPano: false
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
@@ -56,13 +55,8 @@ export default class B2Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 1,
             showPano: false
         });
-    }
-
-    stopPano() {
-        this.setState({showPano: false});
     }
 
     handleToggleClick(event) {

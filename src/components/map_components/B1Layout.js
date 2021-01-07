@@ -23,7 +23,6 @@ export default class B1Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 1,
             showPano: false
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
@@ -50,20 +49,16 @@ export default class B1Layout extends Component {
                     image: "/images/b1/map/b.jpg"
                 },
                 {
-                    btnNames: ["SW3"],
+                    btnNames: ["SWLab3"],
                     image: "/images/b1/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 1,
             showPano: false
         });
     }
 
-    stopPano() {
-        this.setState({showPano: false});
-    }
 
     handleToggleClick(event) {
         const childPanoMap = {};

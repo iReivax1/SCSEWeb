@@ -7,14 +7,9 @@ import "./Layout.css";
 export default class L2Layout extends Component {
     constructor(props) {
         super(props);
-        /*this.state = {
-            levelData: this.props.levelData,
-            level: this.props.level,
-            showPano: false,
-        };*/
         this.state = {
             levelData: [{
-                btnNames: ["Lounge"],
+                btnNames: ["Office"],
                 image: "/images/l2/map/a.jpg"
             },
                 {
@@ -28,10 +23,8 @@ export default class L2Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 2,
             showPano: false
         };
-        //this.props = this.state;
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
         this.childPano = <LoungePano/>;
@@ -48,7 +41,7 @@ export default class L2Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Lounge"],
+                btnNames: ["Office"],
                 image: "/images/l2/map/a.jpg"
             },
                 {
@@ -62,13 +55,8 @@ export default class L2Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 2,
             showPano: false
         });
-    }
-
-    stopPano() {
-        this.setState({showPano: false});
     }
 
     handleToggleClick(event) {

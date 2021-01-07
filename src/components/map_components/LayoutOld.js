@@ -9,7 +9,7 @@ import SWLab1Pano from "./l1/SWLab1Pano";
 import SWLab2Pano from "./l1/SWLab2Pano";
 import "./Layout.css";
 
-export default class Layout extends Component {
+export default class LayoutOld extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -69,7 +69,6 @@ export default class Layout extends Component {
             </div>
         );
         let loadLayout = <ImageScroller>{this.items}</ImageScroller>;
-        // let loadPano = <div className='layout-container'><Pano pano_img={this.state.pano_img} /></div>
         let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (

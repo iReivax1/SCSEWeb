@@ -12,11 +12,6 @@ import "./Layout.css";
 export default class L1Layout extends Component {
     constructor(props) {
         super(props);
-        /*this.state = {
-            levelData: this.props.levelData,
-            level: this.props.level,
-            showPano: false,
-        };*/
         this.state = {
             levelData: [{
                 btnNames: ["Lounge", "SWLab1", "HWLab1"],
@@ -33,7 +28,6 @@ export default class L1Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 1,
             showPano: false
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
@@ -66,14 +60,13 @@ export default class L1Layout extends Component {
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 1,
             showPano: false
         });
     }
 
-    stopPano() {
+    /*stopPano() {
         this.setState({showPano: false});
-    }
+    }*/
 
     handleToggleClick(event) {
         const childPanoMap = {
