@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Pannellum} from "pannellum-react";
-import "./Pano.css"
+import "../Pano.css"
 import ReactJsAlert from "reactjs-alert";
 
 export default class LoungePano extends Component {

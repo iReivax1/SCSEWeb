@@ -2,12 +2,12 @@ import React, {Component} from 'react'
 import ImageScroller from 'react-image-scroller';
 import './Layout.css'
 import {ButtonOverlay} from '../Button';
-import HWLab1Pano from './HWLab1Pano'
-import SWLab1Pano from './SWLab1Pano';
-import LoungePano from './LoungePano';
-import SWLab2Pano from './SWLab2Pano';
-import HWLab2Pano from './HWLab2Pano';
-import HPLPano from './HPLPano';
+import HWLab1Pano from './l1/HWLab1Pano'
+import SWLab1Pano from './l1/SWLab1Pano';
+import LoungePano from './l1/LoungePano';
+import SWLab2Pano from './l1/SWLab2Pano';
+import HWLab2Pano from './l1/HWLab2Pano';
+import HPLPano from './l1/HPLPano';
 
 export default class Layout extends Component {
     constructor(props) {
