@@ -28,7 +28,7 @@ export default class B2Layout extends Component {
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this)
-        
+
     }
 
     componentDidMount() {
@@ -38,7 +38,8 @@ export default class B2Layout extends Component {
     componentWillUnmount() {
 
     }
-    setData(){
+
+    setData() {
         this.setState({
             levelData: [{
                 btnNames: ["SPL"],
@@ -59,13 +60,13 @@ export default class B2Layout extends Component {
             showPano: false
         })
     }
+
     stopPano() {
         this.setState({showPano: false});
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {
-        }
+        const childPanoMap = {}
         this.setState({
             showPano: true,
         });

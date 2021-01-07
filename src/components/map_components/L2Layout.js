@@ -45,7 +45,7 @@ export default class L2Layout extends Component {
 
     }
 
-    setData(){
+    setData() {
         this.setState({
             levelData: [{
                 btnNames: ["Lounge"],
@@ -88,7 +88,8 @@ export default class L2Layout extends Component {
             <div className='container' key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {<ButtonOverlay className='first' id={btnName} onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                        {<ButtonOverlay className='first' id={btnName}
+                                        onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}

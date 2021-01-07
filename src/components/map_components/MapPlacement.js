@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import '../../App.css'
-import { ButtonContainer } from '../Button';
-import Layout from './Layout';
+import {ButtonContainer} from '../Button';
 import './MapPlacement.css';
 import L1Layout from "./L1Layout";
 import L2Layout from "./L2Layout";
@@ -15,8 +14,7 @@ export default class MapPlacement extends Component {
         this.state = {
             layout: <L1Layout/>
         };
-        this.changePanoLayout = React.createRef();
-        // this.layout = <L1Layout ref={this.changePanoLayout}/>
+        //this.changePanoLayout = React.createRef();
         this.handleClick_l1 = this.handleClick_l1.bind(this);
         this.handleClick_l2 = this.handleClick_l2.bind(this);
     }
@@ -44,16 +42,16 @@ export default class MapPlacement extends Component {
     }
     handleClick_b3 = () => {
         this.setState({
-            layoutImage: ['/images/img-home.jpg'],
-            level: 'b3'
-        }
+                layoutImage: ['/images/img-home.jpg'],
+                level: 'b3'
+            }
         )
     }
     handleClick_b4 = () => {
         this.setState({
-            layoutImage: ['/images/img-home.jpg'],
-            level: 'b4'
-        }
+                layoutImage: ['/images/img-home.jpg'],
+                level: 'b4'
+            }
         )
     }
 

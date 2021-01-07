@@ -48,7 +48,8 @@ export default class L1Layout extends Component {
     componentWillUnmount() {
 
     }
-    setData(){
+
+    setData() {
         this.setState({
             levelData: [{
                 btnNames: ["Lounge", "SWLab1", "HWLab1"],
@@ -69,6 +70,7 @@ export default class L1Layout extends Component {
             showPano: false
         })
     }
+
     stopPano() {
         this.setState({showPano: false});
     }
