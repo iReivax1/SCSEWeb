@@ -5,6 +5,8 @@ import Layout from './Layout';
 import './MapPlacement.css';
 import L1Layout from "./L1Layout";
 import L2Layout from "./L2Layout";
+import B1Layout from './B1Layout';
+import B2Layout from './B2Layout';
 
 
 export default class MapPlacement extends Component {
@@ -32,17 +34,13 @@ export default class MapPlacement extends Component {
     }
     handleClick_b1 = () => {
         this.setState({
-            layoutImage: ['/images/img-home.jpg'],
-            level: 'b1'
-        }
-        )
+            layout: <B1Layout/>
+        })
     }
     handleClick_b2 = () => {
         this.setState({
-            layoutImage: ['/images/img-home.jpg'],
-            level: 'b2'
-        }
-        )
+            layout: <B2Layout/>
+        })
     }
     handleClick_b3 = () => {
         this.setState({

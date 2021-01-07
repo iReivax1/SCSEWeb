@@ -2,39 +2,33 @@ import React, {Component} from 'react'
 import ImageScroller from 'react-image-scroller';
 import './Layout.css'
 import {ButtonOverlay} from '../Button';
-import LoungePano from './l1/LoungePano';
 
-export default class L2Layout extends Component {
+
+export default class B1Layout extends Component {
     constructor(props) {
         super(props);
-        /*this.state = {
-            levelData: this.props.levelData,
-            level: this.props.level,
-            showPano: false,
-        };*/
         this.state = {
             levelData: [{
-                btnNames: ["Lounge"],
-                image: "/images/l2/map/a.jpg",
+                btnNames: ["SPL"],
+                image: "/images/b1/map/a.jpg",
             },
                 {
                     btnNames: [],
-                    image: "/images/l2/map/b.jpg",
+                    image: "/images/b1/map/b.jpg",
                 },
                 {
-                    btnNames: [],
-                    image: "/images/l2/map/c.jpg",
+                    btnNames: ["SWLab3"],
+                    image: "/images/b1/map/c.jpg",
                 }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 2,
+            level: 1,
             showPano: false
         };
-        //this.props = this.state;
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this)
-        this.childPano = <LoungePano/>
+        
     }
 
     componentDidMount() {
@@ -44,36 +38,33 @@ export default class L2Layout extends Component {
     componentWillUnmount() {
 
     }
-
     setData(){
         this.setState({
             levelData: [{
-                btnNames: ["Lounge"],
-                image: "/images/l2/map/a.jpg",
+                btnNames: ["SPL"],
+                image: "/images/b1/map/a.jpg",
             },
                 {
                     btnNames: [],
-                    image: "/images/l2/map/b.jpg",
+                    image: "/images/b1/map/b.jpg",
                 },
                 {
-                    btnNames: [],
-                    image: "/images/l2/map/c.jpg",
+                    btnNames: ["SW3"],
+                    image: "/images/b1/map/c.jpg",
                 }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
-            level: 2,
+            level: 1,
             showPano: false
         })
     }
-
     stopPano() {
         this.setState({showPano: false});
     }
 
     handleToggleClick(event) {
         const childPanoMap = {
-            "Lounge": <LoungePano/>
         }
         this.setState({
             showPano: true,
@@ -88,7 +79,14 @@ export default class L2Layout extends Component {
             <div className='container' key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {<ButtonOverlay className='first' id={btnName} onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                        {(btnName === "Lounge" || btnName === "HPL") ?
+                            <ButtonOverlay className='first' id={btnName}
+                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                            : (btnName === "HWLab1") ?
+                                <ButtonOverlay className='third' id={btnName}
+                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                : <ButtonOverlay className='second' id={btnName}
+                                                 onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
