@@ -43,51 +43,13 @@ export default class Layout extends Component {
             "HWLab2": <HWLab2Pano/>,
             "HPL": <HPLPano/>
         }
-        switch (event.target.id) {
-            case "Lounge":
-                this.setState({
-                    showPano: true,
-                });
-                this.childPano = childPanoMap["Lounge"]
-                break;
-            case "SWLab1":
-                this.setState({
-                    showPano: true,
-                });
-                this.childPano = childPanoMap["SWLab1"]
-                break;
-            case "HWLab1":
-                this.setState({
-                    showPano: true,
-                });
-                this.childPano = childPanoMap["HWLab1"]
-                break;
-            case "HWLab2":
-                this.setState({
-                    showPano: true,
-                });
-                this.childPano = childPanoMap["HWLab2"]
-                break;
-            case "HPL":
-                this.setState({
-                    showPano: true,
-                });
-                this.childPano = childPanoMap["HPL"]
-                break;
-            case "SWLab2":
-                this.setState({
-                    showPano: true,
-                });
-                this.childPano = childPanoMap["SWLab2"]
-                break;
-            default:
-                break;
-        }
+        this.setState({
+            showPano: true,
+        });
+        this.childPano = childPanoMap[event.target.id]
     }
 
     render() {
-
-
         this.items = this.props.levelData.map((item, i) =>
             <div className='container' key={i}>
                 {item.btnNames.map(
