@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
 import {Pannellum} from "pannellum-react";
-import "../Pano.css"
+import React, {Component} from "react";
 import ReactJsAlert from "reactjs-alert";
+import "../Pano.css";
 
 export default class HPLPano extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ export default class HPLPano extends Component {
             status: true,
             page: 1,
             title: "Psss. Did you know?",
-            quote: "This is a oscilloscope",
+            quote: "This is a oscilloscope"
         };
     }
 
@@ -28,8 +28,8 @@ export default class HPLPano extends Component {
     handleDetailsClick = () => {
         this.setState({
             showModal: true
-        })
-    }
+        });
+    };
 
     render() {
         let alert = <div className="App">
@@ -40,7 +40,7 @@ export default class HPLPano extends Component {
                 quote={this.state.quote}
                 Close={() => this.setState({showModal: false})}
             />
-        </div>
+        </div>;
         let pano = null;
         switch (this.state.page) {
             case 1:
@@ -73,10 +73,10 @@ export default class HPLPano extends Component {
                         yaw={62.554912374190465}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -87,10 +87,10 @@ export default class HPLPano extends Component {
                         yaw={173.89644667150836}
                         handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -101,10 +101,10 @@ export default class HPLPano extends Component {
                         yaw={-109.02151673795831}
                         handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -115,10 +115,10 @@ export default class HPLPano extends Component {
                         yaw={152.61844566993867}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -129,14 +129,14 @@ export default class HPLPano extends Component {
                         yaw={-161.72256121996318}
                         handleClick={(evt, args) => this.handleHotSpotClick(5, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 2:
                 pano = <Pannellum
@@ -178,10 +178,10 @@ export default class HPLPano extends Component {
                         yaw={122.23488758171847}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -192,10 +192,10 @@ export default class HPLPano extends Component {
                         yaw={43.48010833814965}
                         handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -206,10 +206,10 @@ export default class HPLPano extends Component {
                         yaw={-114.31832675285482}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -220,14 +220,14 @@ export default class HPLPano extends Component {
                         yaw={-11.5780953234948}
                         handleClick={(evt, args) => this.handleHotSpotClick(5, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 3:
                 pano = <Pannellum
@@ -259,10 +259,10 @@ export default class HPLPano extends Component {
                         yaw={-81.56093366704262}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -273,10 +273,10 @@ export default class HPLPano extends Component {
                         yaw={-8.642502433806248}
                         handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -287,10 +287,10 @@ export default class HPLPano extends Component {
                         yaw={-23.132073189788848}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -301,14 +301,14 @@ export default class HPLPano extends Component {
                         yaw={30.36530645828686}
                         handleClick={(evt, args) => this.handleHotSpotClick(5, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 4:
                 pano = <Pannellum
@@ -340,10 +340,10 @@ export default class HPLPano extends Component {
                         yaw={-175.85509410656314}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -354,10 +354,10 @@ export default class HPLPano extends Component {
                         yaw={104.30165132543982}
                         handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -368,10 +368,10 @@ export default class HPLPano extends Component {
                         yaw={130.68085835080927}
                         handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -382,14 +382,14 @@ export default class HPLPano extends Component {
                         yaw={55.391053423356816}
                         handleClick={(evt, args) => this.handleHotSpotClick(5, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 5:
                 pano = <Pannellum
@@ -421,10 +421,10 @@ export default class HPLPano extends Component {
                         yaw={-132.44988575201359}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -435,10 +435,10 @@ export default class HPLPano extends Component {
                         yaw={-101.56990949424913}
                         handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -449,10 +449,10 @@ export default class HPLPano extends Component {
                         yaw={178.13403228660997}
                         handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -463,14 +463,14 @@ export default class HPLPano extends Component {
                         yaw={-51.11615337941361}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             default:
                 break;
@@ -480,6 +480,6 @@ export default class HPLPano extends Component {
                 {this.state.showModal ? alert : null}
                 {pano}
             </div>
-        )
+        );
     }
 }

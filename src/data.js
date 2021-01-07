@@ -3,8 +3,8 @@ export const courseProducts = [
         id: 1,
         courseName: "AI",
         desc: "la la la blah blah"
-    },
-]
+    }
+];
 
 export const mapProducts = [
     {
@@ -12,8 +12,8 @@ export const mapProducts = [
         area: "SW1",
         desc: "This is a pen",
         img: "/images/img-1.jpg"
-    },
-]
+    }
+];
 
 //default place holder
 export const detailedCourseProduct = {
@@ -28,5 +28,5 @@ export const detailedMapProducts = [
         area: "SW1",
         desc: "This is a pen",
         img: "/images/img-1.jpg"
-    },
-]
+    }
+];

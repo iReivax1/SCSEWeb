@@ -1,6 +1,6 @@
-import React from 'react'
-import MapPlacement from '../map_components/MapPlacement'
-import Footer from '../Footer';
+import React from "react";
+import Footer from "../Footer";
+import MapPlacement from "../map_components/MapPlacement";
 
 function Maps() {
     return (
@@ -8,7 +8,7 @@ function Maps() {
             <MapPlacement/>
             <Footer/>
         </>
-    )
+    );
 }
 
-export default Maps
+export default Maps;

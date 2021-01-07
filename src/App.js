@@ -1,25 +1,25 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home from './components/pages/Home';
-import Maps from './components/pages/Maps';
-import VirtualTour from './components/pages/VirtualTour';
-import AI from './components/courses/AI'
-import Video from './components/video_components/VideoPage'
-import CoursesHome from './components/courses/CoursesHome';
+import React from "react";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import "./App.css";
+import AI from "./components/courses/AI";
+import CoursesHome from "./components/courses/CoursesHome";
+import Navbar from "./components/Navbar";
+import Home from "./components/pages/Home";
+import Maps from "./components/pages/Maps";
+import VirtualTour from "./components/pages/VirtualTour";
+import Video from "./components/video_components/VideoPage";
 
 function App() {
     return (
         <Router>
             <Navbar/>
             <Switch>
-                <Route path='/' exact component={Home}/>
-                <Route path='/maps' exact component={Maps}/>
-                <Route path='/tour' exact component={VirtualTour}/>
-                <Route path='/videos' exact component={Video}/>
-                <Route path='/all_courses' exact component={CoursesHome}/>
-                <Route path='/AI' exact component={AI}/>
+                <Route path="/" exact component={Home}/>
+                <Route path="/maps" exact component={Maps}/>
+                <Route path="/tour" exact component={VirtualTour}/>
+                <Route path="/videos" exact component={Video}/>
+                <Route path="/all_courses" exact component={CoursesHome}/>
+                <Route path="/AI" exact component={AI}/>
             </Switch>
         </Router>
 

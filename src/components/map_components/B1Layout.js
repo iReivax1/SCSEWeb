@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
-import ImageScroller from 'react-image-scroller';
-import './Layout.css'
-import {ButtonOverlay} from '../Button';
+import React, {Component} from "react";
+import ImageScroller from "react-image-scroller";
+import {ButtonOverlay} from "../Button";
+import "./Layout.css";
 
 
 export default class B1Layout extends Component {
@@ -10,15 +10,15 @@ export default class B1Layout extends Component {
         this.state = {
             levelData: [{
                 btnNames: ["SPL"],
-                image: "/images/b1/map/a.jpg",
+                image: "/images/b1/map/a.jpg"
             },
                 {
                     btnNames: [],
-                    image: "/images/b1/map/b.jpg",
+                    image: "/images/b1/map/b.jpg"
                 },
                 {
                     btnNames: ["SWLab3"],
-                    image: "/images/b1/map/c.jpg",
+                    image: "/images/b1/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
@@ -27,12 +27,12 @@ export default class B1Layout extends Component {
             showPano: false
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
-        this.setData = this.setData.bind(this)
+        this.setData = this.setData.bind(this);
 
     }
 
     componentDidMount() {
-        this.setData()
+        this.setData();
     }
 
     componentWillUnmount() {
@@ -43,22 +43,22 @@ export default class B1Layout extends Component {
         this.setState({
             levelData: [{
                 btnNames: ["SPL"],
-                image: "/images/b1/map/a.jpg",
+                image: "/images/b1/map/a.jpg"
             },
                 {
                     btnNames: [],
-                    image: "/images/b1/map/b.jpg",
+                    image: "/images/b1/map/b.jpg"
                 },
                 {
                     btnNames: ["SW3"],
-                    image: "/images/b1/map/c.jpg",
+                    image: "/images/b1/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
             level: 1,
             showPano: false
-        })
+        });
     }
 
     stopPano() {
@@ -66,36 +66,36 @@ export default class B1Layout extends Component {
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {}
+        const childPanoMap = {};
         this.setState({
-            showPano: true,
+            showPano: true
         });
-        this.childPano = childPanoMap[event.target.id]
+        this.childPano = childPanoMap[event.target.id];
     }
 
     render() {
 
 
         this.items = this.state.levelData.map((item, i) =>
-            <div className='container' key={i}>
+            <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
                         {(btnName === "Lounge" || btnName === "HPL") ?
-                            <ButtonOverlay className='first' id={btnName}
+                            <ButtonOverlay className="first" id={btnName}
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                             : (btnName === "HWLab1") ?
-                                <ButtonOverlay className='third' id={btnName}
+                                <ButtonOverlay className="third" id={btnName}
                                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                                : <ButtonOverlay className='second' id={btnName}
+                                : <ButtonOverlay className="second" id={btnName}
                                                  onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
-                <img src={item.image} alt={''}/>
+                <img src={item.image} alt={""}/>
             </div>
         );
-        let loadLayout = <ImageScroller>{this.items}</ImageScroller>
-        let loadPano = <div className='layout-container'>{this.childPano}</div>
+        let loadLayout = <ImageScroller>{this.items}</ImageScroller>;
+        let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (
             <div>
@@ -103,6 +103,6 @@ export default class B1Layout extends Component {
                     (this.state.showPano) ? loadPano : loadLayout
                 }
             </div>
-        )
+        );
     }
 }

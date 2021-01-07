@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 // import { ProductConsumer, ProductContext } from '../Context';
 
@@ -10,7 +10,7 @@ function AI() {
         </h1>
 
 
-    )
+    );
 }
 
-export default AI
+export default AI;

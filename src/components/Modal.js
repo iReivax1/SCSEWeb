@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import styled from 'styled-components';
-import {ProductConsumer, ProductContext} from '../Context';
-import {ButtonContainer} from './Button';
-import {Link} from 'react-router-dom';
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import styled from "styled-components";
+import {ProductConsumer, ProductContext} from "../Context";
+import {ButtonContainer} from "./Button";
 
 export default class Modal extends Component {
     render() {
@@ -12,11 +12,11 @@ export default class Modal extends Component {
 
         exitBtn =
             // chang to history.push
-            <Link to='/maps'>
+            <Link to="/maps">
                 <ButtonContainer onClick={() => closeModal()}>
                     Exit
                 </ButtonContainer>
-            </Link>
+            </Link>;
         return (
             <ProductConsumer>
                 {(value) => {
@@ -39,26 +39,26 @@ export default class Modal extends Component {
                                     </div>
                                 </div>
                             </ModalContainer>
-                        )
+                        );
                     }
                 }}
             </ProductConsumer>
-        )
+        );
     }
 }
 Modal.contextType = ProductContext;
 const ModalContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  right           : 0;
+  bottom          : 0;
+  background      : rgba(0, 0, 0, 0.3);
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
 
   #modal {
-    background: var(--mainWhite);
+    background : var(--mainWhite);
   }
 `;

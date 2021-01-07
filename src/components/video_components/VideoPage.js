@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import Footer from '../Footer';
-import VideoPlacement from './VideoPlacement';
+import React, {Component} from "react";
+import Footer from "../Footer";
+import VideoPlacement from "./VideoPlacement";
 
 
 export default class VideoPage extends Component {
@@ -10,6 +10,6 @@ export default class VideoPage extends Component {
                 <VideoPlacement/>
                 <Footer/>
             </React.Fragment>
-        )
+        );
     }
 }

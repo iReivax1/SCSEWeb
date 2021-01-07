@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-import ImageScroller from 'react-image-scroller';
-import './Layout.css'
-import {ButtonOverlay} from '../Button';
-import LoungePano from './l1/LoungePano';
+import React, {Component} from "react";
+import ImageScroller from "react-image-scroller";
+import {ButtonOverlay} from "../Button";
+import LoungePano from "./l1/LoungePano";
+import "./Layout.css";
 
 export default class L2Layout extends Component {
     constructor(props) {
@@ -15,15 +15,15 @@ export default class L2Layout extends Component {
         this.state = {
             levelData: [{
                 btnNames: ["Lounge"],
-                image: "/images/l2/map/a.jpg",
+                image: "/images/l2/map/a.jpg"
             },
                 {
                     btnNames: [],
-                    image: "/images/l2/map/b.jpg",
+                    image: "/images/l2/map/b.jpg"
                 },
                 {
                     btnNames: [],
-                    image: "/images/l2/map/c.jpg",
+                    image: "/images/l2/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
@@ -33,12 +33,12 @@ export default class L2Layout extends Component {
         };
         //this.props = this.state;
         this.handleToggleClick = this.handleToggleClick.bind(this);
-        this.setData = this.setData.bind(this)
-        this.childPano = <LoungePano/>
+        this.setData = this.setData.bind(this);
+        this.childPano = <LoungePano/>;
     }
 
     componentDidMount() {
-        this.setData()
+        this.setData();
     }
 
     componentWillUnmount() {
@@ -49,22 +49,22 @@ export default class L2Layout extends Component {
         this.setState({
             levelData: [{
                 btnNames: ["Lounge"],
-                image: "/images/l2/map/a.jpg",
+                image: "/images/l2/map/a.jpg"
             },
                 {
                     btnNames: [],
-                    image: "/images/l2/map/b.jpg",
+                    image: "/images/l2/map/b.jpg"
                 },
                 {
                     btnNames: [],
-                    image: "/images/l2/map/c.jpg",
+                    image: "/images/l2/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
             level: 2,
             showPano: false
-        })
+        });
     }
 
     stopPano() {
@@ -74,30 +74,30 @@ export default class L2Layout extends Component {
     handleToggleClick(event) {
         const childPanoMap = {
             "Lounge": <LoungePano/>
-        }
+        };
         this.setState({
-            showPano: true,
+            showPano: true
         });
-        this.childPano = childPanoMap[event.target.id]
+        this.childPano = childPanoMap[event.target.id];
     }
 
     render() {
 
 
         this.items = this.state.levelData.map((item, i) =>
-            <div className='container' key={i}>
+            <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {<ButtonOverlay className='first' id={btnName}
+                        {<ButtonOverlay className="first" id={btnName}
                                         onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
-                <img src={item.image} alt={''}/>
+                <img src={item.image} alt={""}/>
             </div>
         );
-        let loadLayout = <ImageScroller>{this.items}</ImageScroller>
-        let loadPano = <div className='layout-container'>{this.childPano}</div>
+        let loadLayout = <ImageScroller>{this.items}</ImageScroller>;
+        let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (
             <div>
@@ -105,6 +105,6 @@ export default class L2Layout extends Component {
                     (this.state.showPano) ? loadPano : loadLayout
                 }
             </div>
-        )
+        );
     }
 }

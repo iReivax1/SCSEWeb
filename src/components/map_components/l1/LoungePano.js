@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
 import {Pannellum} from "pannellum-react";
-import "../Pano.css"
+import React, {Component} from "react";
 import ReactJsAlert from "reactjs-alert";
+import "../Pano.css";
 
 export default class LoungePano extends Component {
     constructor(props) {
@@ -11,15 +11,15 @@ export default class LoungePano extends Component {
             showModal: false,
             status: true,
             title: "SCSE Lounge",
-            quote: "The birthplace of this map.",
+            quote: "The birthplace of this map."
         };
     }
 
     handleDetailsClick = () => {
         this.setState({
             showModal: true
-        })
-    }
+        });
+    };
     handleHotSpotClick_exit = () => {
         window.location.reload();
     };
@@ -33,7 +33,7 @@ export default class LoungePano extends Component {
                 quote={this.state.quote}
                 Close={() => this.setState({showModal: false})}
             />
-        </div>
+        </div>;
         return (
             <div>
                 {this.state.showModal ? alert : null}
@@ -75,10 +75,10 @@ export default class LoungePano extends Component {
                         yaw={-168.3412799816285}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                             //console.log(hotSpotDiv)
                         }}
@@ -89,16 +89,16 @@ export default class LoungePano extends Component {
                         yaw={-18.332900974592143}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                             //console.log(hotSpotDiv)
                         }}
                     />
                 </Pannellum>
             </div>
-        )
+        );
     }
 }

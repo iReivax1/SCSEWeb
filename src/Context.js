@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {courseProducts, detailedMapProducts, mapProducts} from './data';
+import React, {Component} from "react";
+import {courseProducts, detailedMapProducts, mapProducts} from "./data";
 
 const ProductContext = React.createContext();
 
@@ -8,7 +8,7 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
     componentDidMount() {
         this.setCourses();
-        this.setMapProducts()
+        this.setMapProducts();
     }
 
     //hence use copy method to "pass by value"
@@ -17,7 +17,7 @@ class ProductProvider extends Component {
         courseProducts.forEach(item => {
             const singleItem = {...item};
             tempCourses = [...tempCourses, singleItem];
-        })
+        });
         this.setState(() => {
             return {courses: tempCourses};
         });
@@ -28,7 +28,7 @@ class ProductProvider extends Component {
         mapProducts.forEach(item => {
             const singleItem = {...item};
             tempMapProducts = [...tempMapProducts, singleItem];
-        })
+        });
         this.setState(() => {
             return {mapProducts: tempMapProducts};
         });
@@ -38,14 +38,14 @@ class ProductProvider extends Component {
         const product = this.getItem(id);
         this.setState(() => {
             return {modalMapProduct: product, isModalOpen: true};
-        })
-    }
+        });
+    };
 
     closeModal = () => {
         this.setState(() => {
             return {isModalOpen: false};
-        })
-    }
+        });
+    };
 
     state = {
         // if products: storeProducts -> actually pass by reference so any change to products will also change storeProducts in data
@@ -55,8 +55,8 @@ class ProductProvider extends Component {
         isModalOpen: false,
         modalMapProduct: detailedMapProducts,
         openModal: this.openModal,
-        closeModal: this.closeModal,
-    }
+        closeModal: this.closeModal
+    };
 
     getItem = (id) => {
         return this.state.products.find(item => item.id === id);
@@ -77,12 +77,12 @@ class ProductProvider extends Component {
                     ...this.state,
                     handleDetail: this.handleDetail,
                     openModal: this.openModal,
-                    closeModal: this.closeModal,
+                    closeModal: this.closeModal
                 }}>
                 {this.props.children}
             </ProductContext.Provider>
             //pass props to child of context.
-        )
+        );
     }
 }
 

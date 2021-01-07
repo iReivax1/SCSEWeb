@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
 import {Pannellum} from "pannellum-react";
-import {ProductContext} from '../../Context';
-import "./Pano.css"
+import React, {Component} from "react";
 import ReactJsAlert from "reactjs-alert";
+import {ProductContext} from "src/Context";
+import "./Pano.css";
 
 export default class Pano extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ export default class Pano extends Component {
             showModal: false,
             status: true,
             title: "Psss. Did you know?",
-            quote: "This is a computer",
+            quote: "This is a computer"
         };
     }
 
@@ -25,17 +25,17 @@ export default class Pano extends Component {
                 pano_img: this.props.pano_img
             }
         );
-    }
+    };
     handleHotSpotClick = () => {
         this.setState({
-            pano_img: "/images/l1/swlab1/1.jpg",
+            pano_img: "/images/l1/swlab1/1.jpg"
         });
     };
     handleDetailsClick = () => {
         this.setState({
             showModal: true
-        })
-    }
+        });
+    };
 
     render() {
         let alert = <div className="App">
@@ -46,7 +46,7 @@ export default class Pano extends Component {
                 quote={this.state.quote}
                 Close={() => this.setState({showModal: false})}
             />
-        </div>
+        </div>;
         return (
             <div>
                 {this.state.showModal ? alert : null}
@@ -115,19 +115,19 @@ export default class Pano extends Component {
                         yaw={180}
                         handleClick={(evt, args) => this.handleHotSpotClick(evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
-                            console.log(hotSpotDiv)
+                            console.log(hotSpotDiv);
                         }}
                     />
 
                 </Pannellum>
             </div>
 
-        )
+        );
     }
 }
 Pano.contextType = ProductContext;

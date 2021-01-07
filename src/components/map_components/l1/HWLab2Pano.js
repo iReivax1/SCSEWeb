@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
 import {Pannellum} from "pannellum-react";
-import "../Pano.css"
+import React, {Component} from "react";
 import ReactJsAlert from "reactjs-alert";
+import "../Pano.css";
 
 export default class HWLab2Pano extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ export default class HWLab2Pano extends Component {
             status: true,
             page: 1,
             title: "Psss. Did you know?",
-            quote: "This is a computer",
+            quote: "This is a computer"
         };
     }
 
@@ -28,8 +28,8 @@ export default class HWLab2Pano extends Component {
     handleDetailsClick = () => {
         this.setState({
             showModal: true
-        })
-    }
+        });
+    };
 
     render() {
         let alert = <div className="App">
@@ -40,7 +40,7 @@ export default class HWLab2Pano extends Component {
                 quote={this.state.quote}
                 Close={() => this.setState({showModal: false})}
             />
-        </div>
+        </div>;
         let pano = null;
         switch (this.state.page) {
             case 1:
@@ -83,10 +83,10 @@ export default class HWLab2Pano extends Component {
                         yaw={-29.53846635764676}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -97,10 +97,10 @@ export default class HWLab2Pano extends Component {
                         yaw={-118.65070286895214}
                         handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -111,10 +111,10 @@ export default class HWLab2Pano extends Component {
                         yaw={146.49958715309216}
                         handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -125,14 +125,14 @@ export default class HWLab2Pano extends Component {
                         yaw={91.33524846876043}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 2:
                 pano = <Pannellum
@@ -164,14 +164,14 @@ export default class HWLab2Pano extends Component {
                         yaw={61.083090695307696}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 3:
                 pano = <Pannellum
@@ -203,10 +203,10 @@ export default class HWLab2Pano extends Component {
                         yaw={148.22921649658736}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -217,10 +217,10 @@ export default class HWLab2Pano extends Component {
                         yaw={-140.3835997504436}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -231,14 +231,14 @@ export default class HWLab2Pano extends Component {
                         yaw={-26.44757121908345}
                         handleClick={(evt, args) => this.handleHotSpotClick(4, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             case 4:
                 pano = <Pannellum
@@ -270,10 +270,10 @@ export default class HWLab2Pano extends Component {
                         yaw={-149.077852808768}
                         handleClick={(evt, args) => this.handleHotSpotClick(1, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -284,14 +284,14 @@ export default class HWLab2Pano extends Component {
                         yaw={153.47856174799685}
                         handleClick={(evt, args) => this.handleHotSpotClick(3, evt, args)}
                         tooltip={(hotSpotDiv) => {
-                            const imageDiv = document.createElement('img');
-                            imageDiv.setAttribute('width', '45');
-                            imageDiv.setAttribute('height', '45');
-                            imageDiv.setAttribute('src', '/images/up.png')
+                            const imageDiv = document.createElement("img");
+                            imageDiv.setAttribute("width", "45");
+                            imageDiv.setAttribute("height", "45");
+                            imageDiv.setAttribute("src", "/images/up.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                </Pannellum>
+                </Pannellum>;
                 break;
             default:
                 break;
@@ -301,6 +301,6 @@ export default class HWLab2Pano extends Component {
                 {this.state.showModal ? alert : null}
                 {pano}
             </div>
-        )
+        );
     }
 }
