@@ -5,8 +5,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './components/pages/Home';
 import Maps from './components/pages/Maps';
 import VirtualTour from './components/pages/VirtualTour';
-import AI from './components/Courses/AI';
-import Video from './components/VideoComponents/VideoPage'
+import AI from './components/Courses/AI'
+import Video from './components/video_components/VideoPage'
 import CoursesHome from './components/Courses/CoursesHome';
 
 function App() {

@@ -1,0 +1,52 @@
+.container {
+    position: relative;
+    width: 50%;
+    background-color: white;
+}
+
+/* Make the image responsive */
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: inline;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+  grid-gap: 10px;
+  background-color:transparent;
+  padding: 10px;
+  transform: translate(0%, 400%); 
+  
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  
+} */
+
+.first {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+}
+
+.second {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
+.third {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+}
