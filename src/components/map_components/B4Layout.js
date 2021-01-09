@@ -4,21 +4,21 @@ import {ButtonOverlay} from "../Button";
 import "./Layout.css";
 
 
-export default class B1Layout extends Component {
+export default class B4Layout extends Component {
     constructor(props) {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["SPL"],
-                image: "/images/b1/map/a.jpg"
+                btnNames: ["Computer security lab"],
+                image: "/images/b4/map/a.jpg"
             },
                 {
-                    btnNames: [],
-                    image: "/images/b1/map/b.jpg"
+                    btnNames: ["Multi-Platform game innovation center"],
+                    image: "/images/b4/map/b.jpg"
                 },
                 {
-                    btnNames: ["SWLab3"],
-                    image: "/images/b1/map/c.jpg"
+                    btnNames: [],
+                    image: "/images/b4/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
@@ -41,16 +41,16 @@ export default class B1Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Computational intelligience lab", "Digital System lab"],
-                image: "/images/b1/map/a.jpg"
+                btnNames: ["Computer security lab"],
+                image: "/images/b4/map/a.jpg"
             },
                 {
-                    btnNames: ["SPL", "Visual and interactive Computing lab"],
-                    image: "/images/b1/map/b.jpg"
+                    btnNames: ["Multi-Platform game innovation center"],
+                    image: "/images/b4/map/b.jpg"
                 },
                 {
-                    btnNames: ["SWLab3", "Multimedia lab"],
-                    image: "/images/b1/map/c.jpg"
+                    btnNames: [],
+                    image: "/images/b4/map/c.jpg"
                 }],
             yaww: 180,
             updateText: "initial",
@@ -59,10 +59,8 @@ export default class B1Layout extends Component {
         });
     }
 
-
     handleToggleClick(event) {
-        const childPanoMap = {
-        };
+        const childPanoMap = {};
         this.setState({
             showPano: true
         });
@@ -76,13 +74,7 @@ export default class B1Layout extends Component {
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "Computational intelligience lab" || btnName === "SPL" ||btnName === "SWLab3" ) ?
-                            <ButtonOverlay className="first" id={btnName}
-                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                            : (btnName === "Digital System lab" || btnName === "Visual and interactive Computing lab") ?
-                                <ButtonOverlay className="third" id={btnName}
-                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                                : <ButtonOverlay className="second" id={btnName}
+                        {<ButtonOverlay className="second" id={btnName}
                                                  onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 

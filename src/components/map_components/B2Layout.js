@@ -9,15 +9,15 @@ export default class B2Layout extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Lounge", "SWLab1", "HWLab1"],
+                btnNames: ["Computer network and comms lab", "Parallel and distributed systems lab"],
                 image: "/images/b2/map/a.jpg"
             },
                 {
-                    btnNames: ["HWLab2"],
+                    btnNames: ["Hardware & Embedded systems lab"],
                     image: "/images/b2/map/b.jpg"
                 },
                 {
-                    btnNames: ["SWLab2", "HPL"],
+                    btnNames: ["Cyber security lab"],
                     image: "/images/b2/map/c.jpg"
                 }],
             yaww: 180,
@@ -41,15 +41,15 @@ export default class B2Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["SPL"],
+                btnNames: ["Computer network and comms lab", "Parallel and distributed systems lab"],
                 image: "/images/b2/map/a.jpg"
             },
                 {
-                    btnNames: [],
+                    btnNames: ["Hardware & Embedded systems lab"],
                     image: "/images/b2/map/b.jpg"
                 },
                 {
-                    btnNames: ["SW3"],
+                    btnNames: ["Cyber security lab"],
                     image: "/images/b2/map/c.jpg"
                 }],
             yaww: 180,
@@ -74,10 +74,10 @@ export default class B2Layout extends Component {
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "Lounge" || btnName === "HPL") ?
+                        {(btnName === "Computer network and comms lab" || btnName === "HPL") ?
                             <ButtonOverlay className="first" id={btnName}
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                            : (btnName === "HWLab1") ?
+                            : (btnName === "Parallel and distributed systems lab") ?
                                 <ButtonOverlay className="third" id={btnName}
                                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}
