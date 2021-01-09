@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import {ButtonOverlay} from "../Button";
+import SWlab3Pano from "./B1/SWLab3Pano";
 import "./Layout.css";
 
 
@@ -62,6 +63,7 @@ export default class B1Layout extends Component {
 
     handleToggleClick(event) {
         const childPanoMap = {
+            "SWLab3": <SWlab3Pano/>,
         };
         this.setState({
             showPano: true
