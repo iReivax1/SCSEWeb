@@ -75,7 +75,7 @@ export default class B4Layout extends Component {
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
                         {<ButtonOverlay className="second" id={btnName}
-                                                 onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                        onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
