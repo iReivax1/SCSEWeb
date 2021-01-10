@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import {ButtonOverlay} from "../Button";
-import SWlab3Pano from "./B1/SWLab3Pano";
+import SPLPano from "./b1/SPLPano";
+import SWlab3Pano from "./b1/SWLab3Pano";
 import "./Layout.css";
 
 
@@ -42,11 +43,11 @@ export default class B1Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Computational intelligience lab", "Digital System lab"],
+                btnNames: ["Computational Intelligence Lab", "Digital System Lab"],
                 image: "/images/b1/map/a.jpg"
             },
                 {
-                    btnNames: ["SPL", "Visual and interactive Computing lab"],
+                    btnNames: ["SPL", "Visual and Interactive Computing Lab"],
                     image: "/images/b1/map/b.jpg"
                 },
                 {
@@ -63,7 +64,8 @@ export default class B1Layout extends Component {
 
     handleToggleClick(event) {
         const childPanoMap = {
-            "SWLab3": <SWlab3Pano/>
+            "SWLab3": <SWlab3Pano/>,
+            "SPL": <SPLPano/>
         };
         this.setState({
             showPano: true
@@ -78,10 +80,10 @@ export default class B1Layout extends Component {
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "Computational intelligience lab" || btnName === "SPL" || btnName === "SWLab3") ?
+                        {(btnName === "Computational Intelligence Lab" || btnName === "SPL" || btnName === "SWLab3") ?
                             <ButtonOverlay className="first" id={btnName}
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                            : (btnName === "Digital System lab" || btnName === "Visual and interactive Computing lab") ?
+                            : (btnName === "Digital System Lab" || btnName === "Visual and Interactive Computing Lab") ?
                                 <ButtonOverlay className="third" id={btnName}
                                                onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}
