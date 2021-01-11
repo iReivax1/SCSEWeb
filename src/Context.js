@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {courseProducts, detailedMapProducts, mapProducts} from "./data";
 
-const ProductContext = React.createContext();
+const ProductContext = React.createContext("dark");
 
 //2 components in context, provider and consumer
 
