@@ -1,12 +1,12 @@
 import React from "react";
 import "../../App.css";
-import "../HeroSection.css";
+import "./VideoPlacement.css";
 
-function VideoPlacement() {
-
+function VideoPlacement(props) { 
+  
     return (
         <div className="hero-container">
-            <video src="/public/videos/video-1.mp4" autoPlay loop muted/>
+            <iframe width="100%" height="100%" src={props.vid} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     );
 }
