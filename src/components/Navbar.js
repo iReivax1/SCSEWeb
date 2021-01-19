@@ -44,11 +44,11 @@ function Navbar() {
                             Videos
                         </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="/all_courses" className="nav-links" onClick={closeMobileMenu}>
                             Courses
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
                 {button && <Button buttonStyle="btn--outline">360 Map</Button>}
             </div>
