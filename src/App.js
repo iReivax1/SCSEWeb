@@ -1,8 +1,8 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import "./App.css";
-// import AI from "./components/Courses/AI";
-// import CoursesHome from "./components/Courses/CoursesHome";
+// import AI from "./components/courses/AI";
+// import CoursesHome from "./components/courses/CoursesHome";
 import Navbar from "./components/Navbar";
 import Home from "./components/pages/Home";
 import Maps from "./components/pages/Maps";

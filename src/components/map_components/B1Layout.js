@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import {ButtonOverlay} from "../Button";
-import SPLPano from "./B1/SPLPano";
-import SWlab3Pano from "./B1/SWLab3Pano";
+import SPLPano from "./b1/SPLPano";
+import SWlab3Pano from "./b1/SWLab3Pano";
 import "./Layout.css";
 
 
