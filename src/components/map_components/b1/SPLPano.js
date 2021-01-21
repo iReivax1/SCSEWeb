@@ -64,7 +64,7 @@ export default class SPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotdebug={false}
                 >
                     {/*Right Exit*/}
                     <Pannellum.Hotspot
@@ -131,7 +131,7 @@ export default class SPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotdebug={false}
                 >
                     <Pannellum.Hotspot
                         type="custom"
@@ -194,7 +194,7 @@ export default class SPLPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotdebug={false}
                 >
                     {/*Left Exit*/}
                     <Pannellum.Hotspot

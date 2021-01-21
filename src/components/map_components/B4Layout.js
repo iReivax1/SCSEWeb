@@ -9,11 +9,11 @@ export default class B4Layout extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Computer security lab"],
+                btnNames: ["Computer Security Lab"],
                 image: "/images/b4/map/a.jpg"
             },
                 {
-                    btnNames: ["Multi-Platform game innovation center"],
+                    btnNames: ["Multi-Platform Game Innovation Center"],
                     image: "/images/b4/map/b.jpg"
                 },
                 {
@@ -41,11 +41,11 @@ export default class B4Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Computer security lab"],
+                btnNames: ["Computer Security Lab"],
                 image: "/images/b4/map/a.jpg"
             },
                 {
-                    btnNames: ["Multi-Platform game innovation center"],
+                    btnNames: ["Multi-Platform Game Innovation Center"],
                     image: "/images/b4/map/b.jpg"
                 },
                 {

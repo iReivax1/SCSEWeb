@@ -9,7 +9,7 @@ export default class B3Layout extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Research lab"],
+                btnNames: ["Research Lab"],
                 image: "/images/b3/map/a.jpg"
             },
                 {
@@ -41,7 +41,7 @@ export default class B3Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Research lab"],
+                btnNames: ["Research Lab"],
                 image: "/images/b3/map/a.jpg"
             },
                 {

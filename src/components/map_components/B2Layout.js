@@ -13,11 +13,11 @@ export default class B2Layout extends Component {
                 image: "/images/b2/map/a.jpg"
             },
                 {
-                    btnNames: ["Hardware & Embedded systems lab"],
+                    btnNames: ["Hardware & Embedded Systems Lab"],
                     image: "/images/b2/map/b.jpg"
                 },
                 {
-                    btnNames: ["Cyber security lab"],
+                    btnNames: ["Cyber Security Lab"],
                     image: "/images/b2/map/c.jpg"
                 }],
             yaww: 180,
@@ -45,11 +45,11 @@ export default class B2Layout extends Component {
                 image: "/images/b2/map/a.jpg"
             },
                 {
-                    btnNames: ["Hardware & Embedded systems lab"],
+                    btnNames: ["Hardware & Embedded Systems Lab"],
                     image: "/images/b2/map/b.jpg"
                 },
                 {
-                    btnNames: ["Cyber security lab"],
+                    btnNames: ["Cyber Security Lab"],
                     image: "/images/b2/map/c.jpg"
                 }],
             yaww: 180,

@@ -70,11 +70,11 @@ export default class AMDPano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotdebug={false}
                 >
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-17.812201907635136}
+                        pitch={-8.812201907635136}
                         yaw={67.920010903511699}
                         text="more details"
                         handleClick={(evt, args) => {
@@ -96,10 +96,10 @@ export default class AMDPano extends Component {
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
-                    {/*Enter*/}
+                    {/*Entrance*/}
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-9.232015907635136}
+                        pitch={-8.232015907635136}
                         yaw={36.695870234930946}
                         handleClick={(evt, args) => this.handleHotSpotClick(2, evt, args)}
                         tooltip={(hotSpotDiv) => {
@@ -135,10 +135,10 @@ export default class AMDPano extends Component {
                     showZoomCtrl
                     hotspotDebug={false}
                 >
-                    {/*Back of Room*/}
+                    {/*Exit*/}
                     <Pannellum.Hotspot
                         type="custom"
-                        pitch={-6.7230135741783307}
+                        pitch={-5.7230135741783307}
                         yaw={-95.71804501653122}
                         handleClick={(evt, args) => this.handleHotSpotClick_exit(evt, args)}
                         tooltip={(hotSpotDiv) => {
