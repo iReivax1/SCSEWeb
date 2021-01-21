@@ -83,7 +83,7 @@ export default class SWLab1Pano extends Component {
                             const imageDiv = document.createElement("img");
                             imageDiv.setAttribute("width", "45");
                             imageDiv.setAttribute("height", "45");
-                            imageDiv.setAttribute("src", "/images/up.png");
+                            imageDiv.setAttribute("src", "/images/exit.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
@@ -213,7 +213,7 @@ export default class SWLab1Pano extends Component {
                             const imageDiv = document.createElement("img");
                             imageDiv.setAttribute("width", "45");
                             imageDiv.setAttribute("height", "45");
-                            imageDiv.setAttribute("src", "/images/up.png");
+                            imageDiv.setAttribute("src", "/images/exit.png");
                             hotSpotDiv.appendChild(imageDiv);
                         }}
                     />
