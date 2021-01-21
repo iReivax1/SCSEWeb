@@ -9583,6 +9583,13 @@
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
   "version" "3.2.0"
 
+"react-floating-action-button@^1.0.5":
+  "integrity" "sha512-r90Z0AisadYzBvQJ8qGAYkU+b4DtH7V1xO4OhoGYy+u+R4aytBY5rnmTfoTtjEyqIdMTyCDD5XOpngl1vcbkBg=="
+  "resolved" "https://registry.npmjs.org/react-floating-action-button/-/react-floating-action-button-1.0.5.tgz"
+  "version" "1.0.5"
+  dependencies:
+    "react" "^16.8.3"
+
 "react-image-scroller@^0.3.0":
   "integrity" "sha512-pJjTewkuRlkvmF2iKTzrvHs9fJDvqLlz24YYpErouoeRhCiVbVMkcxt4vH8/r39GqRS4qJ74JIna00BsoZizSw=="
   "resolved" "https://registry.npmjs.org/react-image-scroller/-/react-image-scroller-0.3.0.tgz"
@@ -9739,7 +9746,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@^16.13.1":
+"react@^16.13.1", "react@^16.8.3":
   "integrity" "sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.13.1.tgz"
   "version" "16.13.1"

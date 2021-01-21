@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import {ButtonOverlay} from "../Button";
+import AMDPano from "./b3/AMDPano";
 import "./Layout.css";
-import AMDPano from "../map_components/B3/AMDPano"
 
 export default class B3Layout extends Component {
     constructor(props) {
@@ -61,7 +61,7 @@ export default class B3Layout extends Component {
 
     handleToggleClick(event) {
         const childPanoMap = {
-            "AMD Lab": <AMDPano/>,
+            "AMD Lab": <AMDPano/>
         };
         this.setState({
             showPano: true
