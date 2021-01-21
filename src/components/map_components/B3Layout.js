@@ -2,22 +2,22 @@ import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import {ButtonOverlay} from "../Button";
 import "./Layout.css";
-
+import AMDPano from "../map_components/B3/AMDPano"
 
 export default class B3Layout extends Component {
     constructor(props) {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: [""],
+                btnNames: ["Research lab"],
                 image: "/images/b3/map/a.jpg"
             },
                 {
-                    btnNames: ["Research Lab"],
+                    btnNames: ["LILY center", "Emerging technology lab"],
                     image: "/images/b3/map/b.jpg"
                 },
                 {
-                    btnNames: ["", ""],
+                    btnNames: ["AMD Lab"],
                     image: "/images/b3/map/c.jpg"
                 }],
             yaww: 180,
@@ -49,7 +49,7 @@ export default class B3Layout extends Component {
                     image: "/images/b3/map/b.jpg"
                 },
                 {
-                    btnNames: ["Data management and analytics lab"],
+                    btnNames: ["AMD Lab"],
                     image: "/images/b3/map/c.jpg"
                 }],
             yaww: 180,
@@ -60,7 +60,9 @@ export default class B3Layout extends Component {
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {};
+        const childPanoMap = {
+            "AMD Lab": <AMDPano/>,
+        };
         this.setState({
             showPano: true
         });
