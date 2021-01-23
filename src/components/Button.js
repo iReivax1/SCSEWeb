@@ -54,16 +54,16 @@ export const ButtonOverlay = styled.button`
 
   transform        : translate(-50%, 30%);
   -ms-transform    : translate(-50%, -50%);
-  background-color : transparent;
-  color            : black;
+  background-color : rgba(63,192,204,0.7)
+  color            : white;
   font-size        : 12px;
   padding          : 8px 8px;
   cursor           : pointer;
-  border           : 0.1rem solid black;
+  border           : 0.1rem solid #3FC6CC;
   border-radius    : 0.5rem;
 
   &:hover {
-    background : var(--mainBlue);
+    background : rgba(39,121,125,0.7);
     color      : var(--mainWhite);
   }
 
