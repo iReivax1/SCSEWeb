@@ -69,13 +69,12 @@ export default class B4Layout extends Component {
 
     render() {
 
-
         this.items = this.state.levelData.map((item, i) =>
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
                         {<ButtonOverlay className="second" id={btnName}
-                                        onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                        > {btnName}</ButtonOverlay>
                         }
 
                     </span>)}

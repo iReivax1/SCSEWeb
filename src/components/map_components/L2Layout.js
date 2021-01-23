@@ -77,7 +77,7 @@ export default class L2Layout extends Component {
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
                         {<ButtonOverlay className="first" id={btnName}
-                                        onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                        > {btnName}</ButtonOverlay>
                         }
 
                     </span>)}

@@ -70,16 +70,17 @@ export default class B3Layout extends Component {
     }
 
     render() {
+        
         this.items = this.state.levelData.map((item, i) =>
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "LILY center") ?
+                        {(btnName === "LILY center" || btnName === "Research Lab") ?
                             <ButtonOverlay className="first" id={btnName}
-                                           onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                           > {btnName}</ButtonOverlay>
                             : (btnName === "Emerging technology lab") ?
                                 <ButtonOverlay className="third" id={btnName}
-                                               onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
+                                               > {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}
                                                  onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                         }

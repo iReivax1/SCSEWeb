@@ -8,7 +8,7 @@ import B4Layout from "./B4Layout";
 import L1Layout from "./L1Layout";
 import L2Layout from "./L2Layout";
 import "./MapPlacement.css";
-
+import ReactJsAlert from "reactjs-alert";
 
 export default class MapPlacement extends Component {
     childPanoMap = {
@@ -23,19 +23,37 @@ export default class MapPlacement extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            layout: <L1Layout/>
+            layout: <L1Layout/>,
+            showAlert: false
         };
     }
 
     handleClick = (level) => {
-        this.setState({
-            layout: this.childPanoMap[level]
-        });
+       
+        if(level === "Basement 3"){
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: true
+            });
+        }
+        else{
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: false
+            });
+        }
     };
 
     render() {
         return (
             <React.Fragment>
+                {this.state.showAlert ? <ReactJsAlert
+                type="info"
+                title={"Check out the lab"}
+                status={this.state.showAlert}
+                quote={"check out AMD's lab"} 
+                Close={() => this.setState({showAlert: false})}
+                />: null}
                 <div className="layout-container">
                     {this.state.layout}
                 </div>
