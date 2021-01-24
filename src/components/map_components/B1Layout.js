@@ -95,7 +95,7 @@ export default class B1Layout extends Component {
                 <img src={item.image} alt={""}/>
             </div>
         );
-        let loadLayout = <ImageScroller>{this.items}</ImageScroller>;
+        let loadLayout = <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>;
         let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (

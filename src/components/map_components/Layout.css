@@ -27,3 +27,28 @@
     position : absolute;
     top      : 40%;
 }
+
+.index-buttons {
+    width: 100%;
+    display: flex;
+    margin: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    bottom: 0;
+}
+
+.index-button {
+    pointer-events: initial;
+    padding: 0.5em;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+.index-button + .index-button {
+    margin-left: 0.75em;
+}
+.index-button--current,
+.index-button--adjacent + .index-button--adjacent {
+    background: rebeccapurple;
+}
