@@ -76,12 +76,12 @@ export default class B2Layout extends Component {
                     (btnName, j) => <span key={j}>
                         {(btnName === "Computer network and comms lab" || btnName === "HPL") ?
                             <ButtonOverlay className="first" id={btnName}
-                                           > {btnName}</ButtonOverlay>
+                            > {btnName}</ButtonOverlay>
                             : (btnName === "Parallel and distributed systems lab") ?
                                 <ButtonOverlay className="third" id={btnName}
-                                              > {btnName}</ButtonOverlay>
+                                > {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}
-                                               > {btnName}</ButtonOverlay>
+                                > {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
