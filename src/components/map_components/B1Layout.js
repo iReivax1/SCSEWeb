@@ -66,7 +66,7 @@ export default class B1Layout extends Component {
         const childPanoMap = {
             "SWLab3": <SWlab3Pano/>,
             "SPL": <SPLPano/>,
-            "Computational Intelligence Lab" : null
+            "Computational Intelligence Lab": null
         };
         this.setState({
             showPano: true
@@ -86,9 +86,9 @@ export default class B1Layout extends Component {
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                             : (btnName === "Digital System Lab" || btnName === "Visual and Interactive Computing Lab") ?
                                 <ButtonOverlay className="third" id={btnName}
-                                               > {btnName}</ButtonOverlay>
+                                > {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}
-                                                 > {btnName}</ButtonOverlay>
+                                > {btnName}</ButtonOverlay>
                         }
 
                     </span>)}

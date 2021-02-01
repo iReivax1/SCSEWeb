@@ -29,26 +29,28 @@
 }
 
 .index-buttons {
-    width: 100%;
-    display: flex;
-    margin: 1em;
-    flex-wrap: wrap;
-    justify-content: center;
-    pointer-events: none;
-    position: absolute;
-    bottom: 0;
+    bottom          : 0;
+    display         : flex;
+    flex-wrap       : wrap;
+    justify-content : center;
+    margin          : 1em;
+    pointer-events  : none;
+    position        : absolute;
+    width           : 100%;
 }
 
 .index-button {
-    pointer-events: initial;
-    padding: 0.5em;
-    border-radius: 50%;
-    background: #f0f0f0;
+    background     : #f0f0f0;
+    border-radius  : 50%;
+    padding        : 0.5em;
+    pointer-events : initial;
 }
+
 .index-button + .index-button {
-    margin-left: 0.75em;
+    margin-left : 0.75em;
 }
+
 .index-button--current,
 .index-button--adjacent + .index-button--adjacent {
-    background: rebeccapurple;
+    background : rebeccapurple;
 }

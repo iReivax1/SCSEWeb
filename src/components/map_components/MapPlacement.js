@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ReactJsAlert from "reactjs-alert";
 import "../../App.css";
 import {ButtonContainer} from "../Button";
 import B1Layout from "./B1Layout";
@@ -8,7 +9,6 @@ import B4Layout from "./B4Layout";
 import L1Layout from "./L1Layout";
 import L2Layout from "./L2Layout";
 import "./MapPlacement.css";
-import ReactJsAlert from "reactjs-alert";
 
 export default class MapPlacement extends Component {
     childPanoMap = {
@@ -29,14 +29,13 @@ export default class MapPlacement extends Component {
     }
 
     handleClick = (level) => {
-       
-        if(level === "Basement 3"){
+
+        if (level === "Basement 3") {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: true
             });
-        }
-        else{
+        } else {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: false
@@ -48,12 +47,12 @@ export default class MapPlacement extends Component {
         return (
             <React.Fragment>
                 {this.state.showAlert ? <ReactJsAlert
-                type="info"
-                title={"Check out the lab"}
-                status={this.state.showAlert}
-                quote={"check out AMD's lab"} 
-                Close={() => this.setState({showAlert: false})}
-                />: null}
+                    type="info"
+                    title={"Check out the lab"}
+                    status={this.state.showAlert}
+                    quote={"check out AMD's lab"}
+                    Close={() => this.setState({showAlert: false})}
+                /> : null}
                 <div className="layout-container">
                     {this.state.layout}
                 </div>

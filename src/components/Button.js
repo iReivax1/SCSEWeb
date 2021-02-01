@@ -54,7 +54,7 @@ export const ButtonOverlay = styled.button`
 
   transform        : translate(-50%, 30%);
   -ms-transform    : translate(-50%, -50%);
-  background-color : rgba(63,192,204,0.7)
+  background-color : rgba(63, 192, 204, 0.7);
   color            : white;
   font-size        : 12px;
   padding          : 8px 8px;
@@ -63,7 +63,7 @@ export const ButtonOverlay = styled.button`
   border-radius    : 0.5rem;
 
   &:hover {
-    background : rgba(39,121,125,0.7);
+    background : rgba(39, 121, 125, 0.7);
     color      : var(--mainWhite);
   }
 
