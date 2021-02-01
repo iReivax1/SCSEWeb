@@ -44,6 +44,12 @@ export default class VideoPage extends Component {
                 <br/>
                 {/* HW3 */}
                 <VideoPlacement vid="https://www.youtube.com/embed/S7vt3j26Db0"/>
+                <br/>
+                {/* Innovation lab */}
+                <VideoPlacement vid="https://www.youtube.com/embed/-EBkN2v76lk"/>
+                <br/>
+                {/* Innovation lab */}
+                <VideoPlacement vid="https://www.youtube.com/embed/Wmo39geNjVs"/>
                 <Footer/>
             </React.Fragment>
         );
