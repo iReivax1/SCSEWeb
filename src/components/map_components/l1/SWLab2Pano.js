@@ -12,7 +12,7 @@ export default class SWlab2Pano extends Component {
             status: true,
             page: 1,
             title: "Psss. Did you know?",
-            quote: "You should not bring food and drinks into the lab"
+            quote: "You should not bring food and drinks into the lab!"
         };
     }
 
