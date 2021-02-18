@@ -127,7 +127,6 @@ export default class HWlab3Pano extends Component {
                     />
                 </Pannellum>;
                 break;
-                {/*right inner*/ }
             case 2:
                 pano = <Pannellum
                     width="100%"

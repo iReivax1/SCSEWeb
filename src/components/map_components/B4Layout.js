@@ -87,8 +87,7 @@ export default class B4Layout extends Component {
         return (
         
             <div>
-                <br/>
-                <p>B4</p>
+                
                 {
                     (this.state.showPano) ? loadPano : loadLayout
                 }
