@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
+import ReactJsAlert from "reactjs-alert";
 import {ButtonOverlay} from "../Button";
 import AMDPano from "./b3/AMDPano";
 import "./Layout.css";
@@ -60,13 +61,38 @@ export default class B3Layout extends Component {
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {
-            "AMD Lab": <AMDPano/>
-        };
-        this.setState({
-            showPano: true
-        });
-        this.childPano = childPanoMap[event.target.id];
+        switch(event.target.id) {
+            case "LILY center":
+                this.setState({
+                    showAlert: true,
+                    quote: "Research Centre of Excellence in Active Living for the Elderly (LILY)",
+                    title: "LILY center"
+                });
+                break;
+            case "SCALE@NTU":
+                this.setState({
+                    showAlert: true,
+                    quote: "Singtel Cognitive and Artificial Intelligence Lab for Enterprise @ NTU (SCALE@NTU)",
+                    title: "SCALE@NTU",
+                });
+                break;
+            case "DMAL":
+                this.setState({
+                    showAlert: true,
+                    quote: "Data Management and Analytics Labs",
+                    title: "Data Management and Analytics Labs",
+                });
+                break;
+            default:
+                const childPanoMap = {
+                    "AMD Lab": <AMDPano/>
+                };
+                this.setState({
+                    showPano: true
+                });
+                this.childPano = childPanoMap[event.target.id];
+                break;
+        }
     }
 
     render() {
@@ -76,10 +102,10 @@ export default class B3Layout extends Component {
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
                         {(btnName === "LILY center" || btnName === "Research Lab") ?
-                            <ButtonOverlay className="first" id={btnName}
+                            <ButtonOverlay className="first" id={btnName} onClick={this.handleToggleClick}
                             > {btnName}</ButtonOverlay>
                             : (btnName === "Emerging technology lab") ?
-                                <ButtonOverlay className="third" id={btnName}
+                                <ButtonOverlay className="third" id={btnName} onClick={this.handleToggleClick}
                                 > {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}
                                                  onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
@@ -94,6 +120,13 @@ export default class B3Layout extends Component {
 
         return (
             <div>
+                {this.state.showAlert ? <ReactJsAlert
+                    type="info"
+                    title={this.state.title}
+                    status={this.state.showAlert}
+                    quote={this.state.quote}
+                    Close={() => this.setState({showAlert: false})}
+                /> : null}
                 {
                     (this.state.showPano) ? loadPano : loadLayout
                 }
