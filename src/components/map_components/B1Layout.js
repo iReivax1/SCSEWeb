@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
+import ReactJsAlert from "reactjs-alert";
 import {ButtonOverlay} from "../Button";
 import SPLPano from "./b1/SPLPano";
 import SWlab3Pano from "./b1/SWLab3Pano";
@@ -11,15 +12,15 @@ export default class B1Layout extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["SPL"],
+                btnNames: ["Comp Intel Lab", "HWLab3"],
                 image: "/images/b1/map/a.jpg"
             },
                 {
-                    btnNames: [],
+                    btnNames: ["SPL", "Innovation Lab"],
                     image: "/images/b1/map/b.jpg"
                 },
                 {
-                    btnNames: ["SWLab3"],
+                    btnNames: ["SWLab3", "Multimedia Lab"],
                     image: "/images/b1/map/c.jpg"
                 }],
             yaww: 180,
@@ -43,15 +44,15 @@ export default class B1Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Comp Intel Lab", "Digital System Lab"],
+                btnNames: ["Comp Intel Lab", "HWLab3"],
                 image: "/images/b1/map/a.jpg"
             },
                 {
-                    btnNames: ["SPL", "Visual & Interactive Computing Lab"],
+                    btnNames: ["SPL", "Innovation Lab"],
                     image: "/images/b1/map/b.jpg"
                 },
                 {
-                    btnNames: ["SWLab3", "Multimedia lab"],
+                    btnNames: ["SWLab3", "Multimedia Lab"],
                     image: "/images/b1/map/c.jpg"
                 }],
             yaww: 180,
@@ -63,15 +64,39 @@ export default class B1Layout extends Component {
 
 
     handleToggleClick(event) {
-        const childPanoMap = {
-            "SWLab3": <SWlab3Pano/>,
-            "SPL": <SPLPano/>,
-            "Comp Intel Lab": null
-        };
-        this.setState({
-            showPano: true
-        });
-        this.childPano = childPanoMap[event.target.id];
+        switch(event.target.id) {
+            case "Comp Intel Lab":
+                this.setState({
+                    showAlert: true,
+                    quote: "Natural & Artificial Systems are investigated here!",
+                    title: "Comp Intel Lab"
+                });
+                break;
+            case "Innovation Lab":
+                this.setState({
+                    showAlert: true,
+                    quote: "Vision: To grow into an open innovation platform with global reputation.",
+                    title: "Innovation Lab",
+                });
+                break;
+            case "Multimedia Lab":
+                this.setState({
+                    showAlert: true,
+                    quote: "Multimedia and Interactive Computing Lab (MICL)",
+                    title: "Multimedia Lab",
+                });
+                break;
+            default:
+                const childPanoMap = {
+                    "SWLab3": <SWlab3Pano/>,
+                    "SPL": <SPLPano/>
+                };
+                this.setState({
+                    showPano: true
+                });
+                this.childPano = childPanoMap[event.target.id];
+                break;
+        }
     }
 
     render() {
@@ -84,10 +109,10 @@ export default class B1Layout extends Component {
                         {(btnName === "SPL" || btnName === "SWLab3") ?
                             <ButtonOverlay className="first" id={btnName}
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                            : (btnName === "Digital System Lab" || btnName === "Visual & Interactive Computing Lab") ?
-                                <ButtonOverlay className="third" id={btnName}
+                            : (btnName === "HWLab3" || btnName === "Innovation Lab") ?
+                                <ButtonOverlay className="third" id={btnName} onClick={this.handleToggleClick}
                                 > {btnName}</ButtonOverlay>
-                                : <ButtonOverlay className="second" id={btnName}
+                                : <ButtonOverlay className="second" id={btnName} onClick={this.handleToggleClick}
                                 > {btnName}</ButtonOverlay>
                         }
 
@@ -100,6 +125,13 @@ export default class B1Layout extends Component {
 
         return (
             <div>
+                {this.state.showAlert ? <ReactJsAlert
+                    type="info"
+                    title={this.state.title}
+                    status={this.state.showAlert}
+                    quote={this.state.quote}
+                    Close={() => this.setState({showAlert: false})}
+                /> : null}
                 {
                     (this.state.showPano) ? loadPano : loadLayout
                 }
