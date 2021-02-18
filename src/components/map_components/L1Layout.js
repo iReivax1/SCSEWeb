@@ -109,7 +109,7 @@ export default class L1Layout extends Component {
 
         return (
             <div>
-           
+
                 {
                     (this.state.showPano) ? loadPano : loadLayout
                 }

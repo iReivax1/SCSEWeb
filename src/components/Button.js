@@ -33,8 +33,8 @@ export const ButtonContainer = styled.button`
   background     : transparent;
   border-color   : var(--mainBlue);
   color          : black;
-  border           : 0.1rem solid #3FC6CC;
-  border-radius    : 0.5rem;
+  border         : 0.1rem solid #3FC6CC;
+  border-radius  : 0.5rem;
   padding        : 0.2rem 0.5rem;
   cursor         : pointer;
   margin         : 0.2rem 0.5rem;
@@ -55,8 +55,8 @@ export const ButtonContainerHighlight = styled.button`
   background     : black;
   border-color   : var(--mainBlue);
   color          : white;
-  border           : 0.1rem solid #3FC6CC;
-  border-radius    : 0.5rem;
+  border         : 0.1rem solid #3FC6CC;
+  border-radius  : 0.5rem;
   padding        : 0.2rem 0.5rem;
   cursor         : pointer;
   margin         : 0.2rem 0.5rem;

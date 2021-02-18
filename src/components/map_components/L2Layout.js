@@ -22,7 +22,7 @@ export default class L2Layout extends Component {
                 }],
             yaww: 180,
             updateText: "initial",
-            author: "SCSE",
+            author: "SCSE"
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
@@ -52,7 +52,7 @@ export default class L2Layout extends Component {
                 }],
             yaww: 180,
             updateText: "initial",
-            author: "SCSE",
+            author: "SCSE"
         });
     }
 
@@ -83,7 +83,7 @@ export default class L2Layout extends Component {
         return (
 
             <div>
-          
+
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"
                     title={this.state.title}

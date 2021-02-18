@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
-import { ButtonOverlaySCSE} from "../Button";
+import {ButtonOverlaySCSE} from "../Button";
 import L1Layout from "./L1Layout";
 import "./Layout.css";
 
@@ -12,13 +12,14 @@ export default class Overview extends Component {
                 btnNames: ["SCSE"],
                 image: "/images/overview.jpg"
             }],
-            layout: <L1Layout/>, 
+            layout: <L1Layout/>,
             showLayout: false
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
     }
-    handleAlertOnClick (){
+
+    handleAlertOnClick() {
         this.props.setAlertL1();
     }
 
@@ -36,7 +37,7 @@ export default class Overview extends Component {
                 btnNames: ["SCSE"],
                 image: "/images/overview.jpg"
             }],
-            layout: <L1Layout/>, 
+            layout: <L1Layout/>,
             showLayout: false
         });
     }
@@ -53,14 +54,14 @@ export default class Overview extends Component {
     }
 
     render() {
-       
+
 
         this.items = this.state.levelData.map((item, i) =>
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {<ButtonOverlaySCSE className="zero" id={btnName} onClick={this.handleToggleClick}> 
-                        {btnName}</ButtonOverlaySCSE>
+                        {<ButtonOverlaySCSE className="zero" id={btnName} onClick={this.handleToggleClick}>
+                            {btnName}</ButtonOverlaySCSE>
                         }
 
                     </span>)}
@@ -70,14 +71,14 @@ export default class Overview extends Component {
         let loadOverview = <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>;
         let layout = <div className="layout-container">
             {this.state.layout}
-        </div>
+        </div>;
 
         return (
-            
+
             <div>
-                {this.state.showLayout ? layout : loadOverview}                
-                
-                
+                {this.state.showLayout ? layout : loadOverview}
+
+
             </div>
         );
     }

@@ -61,7 +61,7 @@ export default class B3Layout extends Component {
     }
 
     handleToggleClick(event) {
-        switch(event.target.id) {
+        switch (event.target.id) {
             case "LILY center":
                 this.setState({
                     showAlert: true,
@@ -73,14 +73,14 @@ export default class B3Layout extends Component {
                 this.setState({
                     showAlert: true,
                     quote: "Singtel Cognitive and Artificial Intelligence Lab for Enterprise @ NTU (SCALE@NTU)",
-                    title: "SCALE@NTU",
+                    title: "SCALE@NTU"
                 });
                 break;
             case "DMAL":
                 this.setState({
                     showAlert: true,
                     quote: "For DSAI",
-                    title: "Data Management and Analytics Labs",
+                    title: "Data Management and Analytics Labs"
                 });
                 break;
             default:
@@ -120,7 +120,7 @@ export default class B3Layout extends Component {
 
         return (
             <div>
-              
+
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"
                     title={this.state.title}

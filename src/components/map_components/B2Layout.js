@@ -61,7 +61,7 @@ export default class B2Layout extends Component {
     }
 
     handleToggleClick(event) {
-        switch(event.target.id) {
+        switch (event.target.id) {
             case "Computer network & comms lab":
                 this.setState({
                     showAlert: true,
@@ -73,21 +73,21 @@ export default class B2Layout extends Component {
                 this.setState({
                     showAlert: true,
                     quote: "PDCL (formerly Parallel and Distributed Computing Lab) was established in 1994. Since then, there have been numerous successful research projects and activities carried out.",
-                    title: "Parallel and Distributed Computing Lab",
+                    title: "Parallel and Distributed Computing Lab"
                 });
                 break;
             case "Hardware & Embedded Systems Lab":
                 this.setState({
                     showAlert: true,
                     quote: "HESL, originally known as Centre for High Performance Embedded Systems (CHiPES),was founded in April 1998 to promote research and development in embedded systems engineering using state-of-the-art VLSI CAD tools and technology.",
-                    title: "Hardware & Embedded Systems Lab",
+                    title: "Hardware & Embedded Systems Lab"
                 });
                 break;
             case "Cyber Security Lab":
                 this.setState({
                     showAlert: true,
                     quote: "Cyber Security Lab (CSL)",
-                    title: "Cyber Security Lab (CSL)",
+                    title: "Cyber Security Lab (CSL)"
                 });
                 break;
             default:
@@ -121,7 +121,7 @@ export default class B2Layout extends Component {
 
         return (
             <div>
-         
+
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"
                     title={this.state.title}

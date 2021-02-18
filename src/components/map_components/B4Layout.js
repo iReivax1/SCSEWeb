@@ -85,9 +85,9 @@ export default class B4Layout extends Component {
         let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (
-        
+
             <div>
-                
+
                 {
                     (this.state.showPano) ? loadPano : loadLayout
                 }

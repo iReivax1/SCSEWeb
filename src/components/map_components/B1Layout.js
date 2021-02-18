@@ -2,9 +2,9 @@ import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import ReactJsAlert from "reactjs-alert";
 import {ButtonOverlay} from "../Button";
+import HWLab3 from "./b1/HWLab3Pano";
 import SPLPano from "./b1/SPLPano";
 import SWlab3Pano from "./b1/SWLab3Pano";
-import HWLab3 from "./b1/HWLab3Pano";
 import "./Layout.css";
 
 
@@ -65,7 +65,7 @@ export default class B1Layout extends Component {
 
 
     handleToggleClick(event) {
-        switch(event.target.id) {
+        switch (event.target.id) {
             case "Comp Intel Lab":
                 this.setState({
                     showAlert: true,
@@ -77,21 +77,21 @@ export default class B1Layout extends Component {
                 this.setState({
                     showAlert: true,
                     quote: "Vision: To grow into an open innovation platform with global reputation.",
-                    title: "Innovation Lab",
+                    title: "Innovation Lab"
                 });
                 break;
             case "Multimedia Lab":
                 this.setState({
                     showAlert: true,
                     quote: "Multimedia and Interactive Computing Lab (MICL)",
-                    title: "Multimedia Lab",
+                    title: "Multimedia Lab"
                 });
                 break;
             default:
                 const childPanoMap = {
                     "SWLab3": <SWlab3Pano/>,
                     "SPL": <SPLPano/>,
-                    "HWLab3" : <HWLab3/>
+                    "HWLab3": <HWLab3/>
                 };
                 this.setState({
                     showPano: true
@@ -127,7 +127,7 @@ export default class B1Layout extends Component {
 
         return (
             <div>
-             
+
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"
                     title={this.state.title}

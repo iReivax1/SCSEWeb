@@ -50,6 +50,7 @@ video {
         font-size  : 70px;
         margin-top : -150px;
     }
+
     .video-container {
         align-items     : center;
         background      : center center/cover no-repeat;
@@ -60,7 +61,7 @@ video {
         justify-content : center;
         object-fit      : contain;
         /* width           : 50vh; */
-    
+
     }
 }
 
@@ -82,6 +83,7 @@ video {
     .btn {
         width : 100%;
     }
+
     .video-container {
         align-items     : center;
         background      : center center/cover no-repeat;
@@ -92,7 +94,7 @@ video {
         justify-content : center;
         object-fit      : contain;
         /* width           : 50vh; */
-    
+
     }
 }
   

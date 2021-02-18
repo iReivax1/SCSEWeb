@@ -11,12 +11,13 @@
 }
 
 
-.zero{
-    left     :50%;
+.zero {
+    left     : 50%;
     position : absolute;
     top      : 70%;
-    
+
 }
+
 .first {
     left     : 30%;
     position : absolute;
@@ -63,18 +64,18 @@
 }
 
 
-
 @media screen and (max-width : 1112px) {
-    .zero{
-        left     :50%;
+    .zero {
+        left     : 50%;
         position : absolute;
-        top: 45%;
+        top      : 45%;
     }
+
     @media screen and (max-width : 736px) {
-        .zero{
-            left     :50%;
+        .zero {
+            left     : 50%;
             position : absolute;
-            top: 10%;
+            top      : 10%;
         }
     }
 }

@@ -1,5 +1,5 @@
-import { Pannellum } from "pannellum-react";
-import React, { Component } from "react";
+import {Pannellum} from "pannellum-react";
+import React, {Component} from "react";
 import ReactJsAlert from "reactjs-alert";
 import "../Pano.css";
 
@@ -21,8 +21,8 @@ export default class HWlab3Pano extends Component {
     };
     setPanoImage = () => {
         this.setState({
-            pano_img: this.props.pano_img
-        }
+                pano_img: this.props.pano_img
+            }
         );
     };
     handleHotSpotClick = (number) => {
@@ -44,7 +44,7 @@ export default class HWlab3Pano extends Component {
                 title={this.state.title}
                 status={this.state.status}
                 quote={this.state.quote}
-                Close={() => this.setState({ showModal: false })}
+                Close={() => this.setState({showModal: false})}
             />
         </div>;
         let pano = null;
@@ -80,7 +80,7 @@ export default class HWlab3Pano extends Component {
                         handleClick={(evt, args) => {
                             this.handleDetailsClick(args.id);
                         }}
-                        handleClickArg={() => this.state.showDetails ? { "id": 1 } : { "id": 2 }}
+                        handleClickArg={() => this.state.showDetails ? {"id": 1} : {"id": 2}}
                     />
                     {/*Exit*/}
                     <Pannellum.Hotspot
