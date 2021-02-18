@@ -36,6 +36,13 @@
     top      : 40%;
 }
 
+
+.amd {
+    left     : 15%;
+    position : absolute;
+    top      : 20%;
+}
+
 .index-buttons {
     bottom          : 0;
     display         : flex;
@@ -70,12 +77,22 @@
         position : absolute;
         top      : 45%;
     }
+    .amd{
+        left     : 15%;
+        position : absolute;
+        top      : 12%;
+    }
 
     @media screen and (max-width : 736px) {
         .zero {
             left     : 50%;
             position : absolute;
             top      : 10%;
+        }
+        .amd{
+            left     : 15%;
+            position : absolute;
+            top      : 5%;
         }
     }
 }
