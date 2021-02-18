@@ -12,7 +12,7 @@ export default class HWLab2Pano extends Component {
             status: true,
             page: 1,
             title: "Psss. Did you know?",
-            quote: "This is a computer"
+            quote: "This is a computer!"
         };
     }
 

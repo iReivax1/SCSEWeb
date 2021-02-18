@@ -10,7 +10,7 @@ export default class B2Layout extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Computer network & comms lab", "Parallel & distributed systems lab"],
+                btnNames: ["Computer Network & Comms Lab", "Parallel & Distributed Systems Lab"],
                 image: "/images/b2/map/a.jpg"
             },
                 {
@@ -42,7 +42,7 @@ export default class B2Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Computer network & comms lab", "Parallel & distributed systems lab"],
+                btnNames: ["Computer Network & Comms Lab", "Parallel & Distributed Systems Lab"],
                 image: "/images/b2/map/a.jpg"
             },
                 {
@@ -62,14 +62,14 @@ export default class B2Layout extends Component {
 
     handleToggleClick(event) {
         switch (event.target.id) {
-            case "Computer network & comms lab":
+            case "Computer Network & Comms Lab":
                 this.setState({
                     showAlert: true,
                     quote: "CNCL conducts research in data communications and networking that addresses information transfer among humans, computers, and devices using wired and wireless connections.",
-                    title: "Computer network & comms lab"
+                    title: "Computer Network & Comms Lab"
                 });
                 break;
-            case "Parallel & distributed systems lab":
+            case "Parallel & Distributed Systems Lab":
                 this.setState({
                     showAlert: true,
                     quote: "PDCL (formerly Parallel and Distributed Computing Lab) was established in 1994. Since then, there have been numerous successful research projects and activities carried out.",
@@ -102,10 +102,10 @@ export default class B2Layout extends Component {
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "Computer network & comms lab" || btnName === "HPL") ?
+                        {(btnName === "Computer Network & Comms Lab" || btnName === "HPL") ?
                             <ButtonOverlay className="first" id={btnName} onClick={this.handleToggleClick}
                             > {btnName}</ButtonOverlay>
-                            : (btnName === "Parallel & distributed systems lab") ?
+                            : (btnName === "Parallel & Distributed Systems Lab") ?
                                 <ButtonOverlay className="third" id={btnName} onClick={this.handleToggleClick}
                                 > {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName} onClick={this.handleToggleClick}
