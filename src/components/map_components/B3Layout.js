@@ -120,6 +120,7 @@ export default class B3Layout extends Component {
 
         return (
             <div>
+                <br/>
                 <p>B3</p>
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"

@@ -83,6 +83,7 @@ export default class L2Layout extends Component {
         return (
 
             <div>
+                <br/>
                 <p>L2</p>
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"

@@ -109,6 +109,7 @@ export default class L1Layout extends Component {
 
         return (
             <div>
+                <br/>
                 <p>L1</p>
                 {
                     (this.state.showPano) ? loadPano : loadLayout
