@@ -43,11 +43,11 @@ export default class B1Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Computational Intelligence Lab", "Digital System Lab"],
+                btnNames: ["Comp Intel Lab", "Digital System Lab"],
                 image: "/images/b1/map/a.jpg"
             },
                 {
-                    btnNames: ["SPL", "Visual and Interactive Computing Lab"],
+                    btnNames: ["SPL", "Visual & Interactive Computing Lab"],
                     image: "/images/b1/map/b.jpg"
                 },
                 {
@@ -66,7 +66,7 @@ export default class B1Layout extends Component {
         const childPanoMap = {
             "SWLab3": <SWlab3Pano/>,
             "SPL": <SPLPano/>,
-            "Computational Intelligence Lab": null
+            "Comp Intel Lab": null
         };
         this.setState({
             showPano: true
@@ -84,7 +84,7 @@ export default class B1Layout extends Component {
                         {(btnName === "SPL" || btnName === "SWLab3") ?
                             <ButtonOverlay className="first" id={btnName}
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
-                            : (btnName === "Digital System Lab" || btnName === "Visual and Interactive Computing Lab") ?
+                            : (btnName === "Digital System Lab" || btnName === "Visual & Interactive Computing Lab") ?
                                 <ButtonOverlay className="third" id={btnName}
                                 > {btnName}</ButtonOverlay>
                                 : <ButtonOverlay className="second" id={btnName}

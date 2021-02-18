@@ -8,29 +8,30 @@ import B3Layout from "./B3Layout";
 import B4Layout from "./B4Layout";
 import L1Layout from "./L1Layout";
 import L2Layout from "./L2Layout";
+import Overview from "./Overview";
 import "./MapPlacement.css";
 
 export default class MapPlacement extends Component {
     childPanoMap = {
-        "Level 2": <L2Layout/>,
-        "Level 1": <L1Layout/>,
-        "Basement 1": <B1Layout/>,
-        "Basement 2": <B2Layout/>,
-        "Basement 3": <B3Layout/>,
-        "Basement 4": <B4Layout/>
+        "L2": <L2Layout/>,
+        "L1": <L1Layout/>,
+        "B1": <B1Layout/>,
+        "B2": <B2Layout/>,
+        "B3": <B3Layout/>,
+        "B4": <B4Layout/>
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            layout: <L1Layout/>,
+            layout: <Overview/>,
             showAlert: false
         };
     }
 
     handleClick = (level) => {
 
-        if (level === "Basement 3") {
+        if (level === "B3") {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: true

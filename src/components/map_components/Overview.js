@@ -1,25 +1,17 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
 import {ButtonOverlay} from "../Button";
+import LoungePano from "./l1/LoungePano";
 import "./Layout.css";
 
-
-export default class B2Layout extends Component {
+export default class Overview extends Component {
     constructor(props) {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Computer network and comms lab", "Parallel & distributed systems lab"],
-                image: "/images/b2/map/a.jpg"
-            },
-                {
-                    btnNames: ["Hardware & Embedded Systems Lab"],
-                    image: "/images/b2/map/b.jpg"
-                },
-                {
-                    btnNames: ["Cyber Security Lab"],
-                    image: "/images/b2/map/c.jpg"
-                }],
+                btnNames: [],
+                image: "/images/overview.jpg"
+            }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
@@ -27,7 +19,7 @@ export default class B2Layout extends Component {
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
-
+        this.childPano = <LoungePano/>;
     }
 
     componentDidMount() {
@@ -41,17 +33,9 @@ export default class B2Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Computer network & comms lab", "Parallel & distributed systems lab"],
-                image: "/images/b2/map/a.jpg"
-            },
-                {
-                    btnNames: ["Hardware & Embedded Systems Lab"],
-                    image: "/images/b2/map/b.jpg"
-                },
-                {
-                    btnNames: ["Cyber Security Lab"],
-                    image: "/images/b2/map/c.jpg"
-                }],
+                btnNames: [],
+                image: "/images/overview.jpg"
+            }],
             yaww: 180,
             updateText: "initial",
             author: "SCSE",
@@ -60,7 +44,9 @@ export default class B2Layout extends Component {
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {};
+        const childPanoMap = {
+            "Lounge": <LoungePano/>
+        };
         this.setState({
             showPano: true
         });
@@ -74,14 +60,8 @@ export default class B2Layout extends Component {
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "Computer network & comms lab" || btnName === "HPL") ?
-                            <ButtonOverlay className="first" id={btnName}
-                            > {btnName}</ButtonOverlay>
-                            : (btnName === "Parallel & distributed systems lab") ?
-                                <ButtonOverlay className="third" id={btnName}
-                                > {btnName}</ButtonOverlay>
-                                : <ButtonOverlay className="second" id={btnName}
-                                > {btnName}</ButtonOverlay>
+                        {<ButtonOverlay className="first" id={btnName}
+                        > {btnName}</ButtonOverlay>
                         }
 
                     </span>)}
