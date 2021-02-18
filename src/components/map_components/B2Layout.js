@@ -79,7 +79,7 @@ export default class B2Layout extends Component {
             case "Hardware & Embedded Systems Lab":
                 this.setState({
                     showAlert: true,
-                    quote: "HESL, originally known as Centre for High Performance Embedded Systems (CHiPES),was founded in April 1998 to promote research and development in embedded systems engineering using state-of-the-art VLSI CAD tools and technology.",
+                    quote: "HESL, originally known as Centre for High Performance Embedded Systems (CHiPES), was founded in April 1998 to promote research and development in embedded systems engineering using state-of-the-art VLSI CAD tools and technology.",
                     title: "Hardware & Embedded Systems Lab"
                 });
                 break;
