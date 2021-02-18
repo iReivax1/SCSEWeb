@@ -53,12 +53,13 @@ export default class MapPlacement extends Component {
                     quote={"check out AMD's lab"}
                     Close={() => this.setState({showAlert: false})}
                 /> : null}
-                <div className="layout-container">
-                    {this.state.layout}
-                </div>
                 {Object.keys(this.childPanoMap).map((item) => <ButtonContainer onClick={() => this.handleClick(item)}>
                     {item}
                 </ButtonContainer>)}
+                <div className="layout-container">
+                    {this.state.layout}
+                </div>
+
             </React.Fragment>
         );
     }
