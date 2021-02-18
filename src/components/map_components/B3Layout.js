@@ -9,15 +9,15 @@ export default class B3Layout extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: ["Research Lab"],
+                btnNames: ["AMD Lab"],
                 image: "/images/b3/map/a.jpg"
             },
                 {
-                    btnNames: ["LILY center", "Emerging technology lab"],
+                    btnNames: ["LILY center", "SCALE@NTU"],
                     image: "/images/b3/map/b.jpg"
                 },
                 {
-                    btnNames: ["AMD Lab"],
+                    btnNames: ["DMAL"],
                     image: "/images/b3/map/c.jpg"
                 }],
             yaww: 180,
@@ -41,15 +41,15 @@ export default class B3Layout extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: ["Research Lab"],
+                btnNames: ["AMD Lab"],
                 image: "/images/b3/map/a.jpg"
             },
                 {
-                    btnNames: ["LILY center", "Emerging technology lab"],
+                    btnNames: ["LILY center", "SCALE@NTU"],
                     image: "/images/b3/map/b.jpg"
                 },
                 {
-                    btnNames: ["AMD Lab"],
+                    btnNames: ["DMAL"],
                     image: "/images/b3/map/c.jpg"
                 }],
             yaww: 180,

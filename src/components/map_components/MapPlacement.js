@@ -34,9 +34,52 @@ export default class MapPlacement extends Component {
         if (level === "B3") {
             this.setState({
                 layout: this.childPanoMap[level],
-                showAlert: true
+                showAlert: true,
+                quote: "This level has all the confidental lab but you could check out AMD's lab. DSAI peeps will go to DMAL once a week ",
+                title: "Check out the AMD labs"
             });
-        } else {
+        } 
+        else if (level === "L1") {
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: true,
+                quote: "This level has all labs for undergraduate classes",
+                title: "Check out the labs and student lounge"
+            });
+        }
+        else if (level === "B1") {
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: true,
+                quote: "This level has a mix of labs for undergraduate classes and research labs",
+                title: "Check out the labs"
+            });
+        }
+        else if (level === "B2") {
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: true,
+                quote: "This level consists of all the research labs. You might get a chance to visit them for your final year project",
+                title: "Just scroll through. Restricted entry!!!"
+            });
+        }
+        else if (level === "B4") {
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: true,
+                quote: "This level consists of more research labs",
+                title: "Just scroll through"
+            });
+        }
+        else if (level === "L2") {
+            this.setState({
+                layout: this.childPanoMap[level],
+                showAlert: true,
+                quote: "This level consists of the professors' offices! ",
+                title: "Find your favourite profs here."
+            });
+        }
+        else {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: false
@@ -49,9 +92,9 @@ export default class MapPlacement extends Component {
             <React.Fragment>
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"
-                    title={"Check out the lab"}
+                    title={this.state.title}
                     status={this.state.showAlert}
-                    quote={"check out AMD's lab"}
+                    quote={this.state.quote}
                     Close={() => this.setState({showAlert: false})}
                 /> : null}
                 {Object.keys(this.childPanoMap).map((item) => <ButtonContainer onClick={() => this.handleClick(item)}>
