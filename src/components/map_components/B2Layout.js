@@ -121,6 +121,7 @@ export default class B2Layout extends Component {
 
         return (
             <div>
+                <p>B2</p>
                 {this.state.showAlert ? <ReactJsAlert
                     type="info"
                     title={this.state.title}
