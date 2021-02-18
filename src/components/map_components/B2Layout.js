@@ -90,6 +90,8 @@ export default class B2Layout extends Component {
                     title: "Cyber Security Lab (CSL)",
                 });
                 break;
+            default:
+                break;
         }
     }
 
