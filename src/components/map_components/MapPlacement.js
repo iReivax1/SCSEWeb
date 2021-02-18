@@ -46,7 +46,7 @@ export default class MapPlacement extends Component {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: true,
-                quote: "This level has all the confidental lab. DSAI peeps will go to DMAL once a week ",
+                quote: "This level has all the confidential lab. DSAI peeps will go to AMD Lab once a week ",
                 title: "Check out the AMD labs",
                 selected: "B3"
             });
