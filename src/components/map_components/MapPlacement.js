@@ -35,7 +35,8 @@ export default class MapPlacement extends Component {
 
             showAlert: true,
             quote: "This level has all labs for undergraduate classes",
-            title: "Check out the labs and student lounge"
+            title: "Check out the labs and student lounge",
+            selected: "L1"
 
         })
     }
