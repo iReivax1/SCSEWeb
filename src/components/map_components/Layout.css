@@ -36,6 +36,13 @@
     top      : 40%;
 }
 
+
+.amd {
+    left     : 15%;
+    position : absolute;
+    top      : 20%;
+}
+
 .index-buttons {
     bottom          : 0;
     display         : flex;
