@@ -90,7 +90,7 @@ export default class L1Layout extends Component {
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {(btnName === "Lounge" || btnName === "HPL") ?
+                        {(btnName === "Lounge" || btnName === "SWLab2") ?
                             <ButtonOverlay className="first" id={btnName}
                                            onClick={this.handleToggleClick}> {btnName}</ButtonOverlay>
                             : (btnName === "HWLab1") ?
