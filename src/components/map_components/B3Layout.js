@@ -79,7 +79,7 @@ export default class B3Layout extends Component {
             case "DMAL":
                 this.setState({
                     showAlert: true,
-                    quote: "Data Management and Analytics Labs",
+                    quote: "For DSAI",
                     title: "Data Management and Analytics Labs",
                 });
                 break;

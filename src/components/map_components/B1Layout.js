@@ -4,6 +4,7 @@ import ReactJsAlert from "reactjs-alert";
 import {ButtonOverlay} from "../Button";
 import SPLPano from "./b1/SPLPano";
 import SWlab3Pano from "./b1/SWLab3Pano";
+import HWLab3 from "./b1/HWLab3Pano";
 import "./Layout.css";
 
 
@@ -89,7 +90,8 @@ export default class B1Layout extends Component {
             default:
                 const childPanoMap = {
                     "SWLab3": <SWlab3Pano/>,
-                    "SPL": <SPLPano/>
+                    "SPL": <SPLPano/>,
+                    "HWLab3" : <HWLab3/>
                 };
                 this.setState({
                     showPano: true
