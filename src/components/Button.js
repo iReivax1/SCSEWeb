@@ -70,3 +70,24 @@ export const ButtonOverlay = styled.button`
   &:focus {
     outline : none;
 `;
+
+export const ButtonOverlaySCSE = styled.button`
+
+  transform        : translate(-50%, 30%);
+  -ms-transform    : translate(-50%, -50%);
+  background-color : rgba(63, 192, 204, 0.7);
+  color            : white;
+  font-size        : 1.5rem;
+  padding          : 8px 8px;
+  cursor           : pointer;
+  border           : 0.1rem solid #3FC6CC;
+  border-radius    : 0.5rem;
+
+  &:hover {
+    background : rgba(39, 121, 125, 0.7);
+    color      : var(--mainWhite);
+  }
+
+  &:focus {
+    outline : none;
+`;

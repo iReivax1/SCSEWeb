@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import ImageScroller from "react-image-scroller";
-import {ButtonOverlay} from "../Button";
-import LoungePano from "./l1/LoungePano";
+import { ButtonOverlaySCSE} from "../Button";
+import L1Layout from "./L1Layout";
 import "./Layout.css";
 
 export default class Overview extends Component {
@@ -9,17 +9,15 @@ export default class Overview extends Component {
         super(props);
         this.state = {
             levelData: [{
-                btnNames: [],
+                btnNames: ["SCSE"],
                 image: "/images/overview.jpg"
             }],
-            yaww: 180,
-            updateText: "initial",
-            author: "SCSE",
-            showPano: false
+            layout: <L1Layout/>, 
+            showLayout: false
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
-        this.childPano = <LoungePano/>;
+        
     }
 
     componentDidMount() {
@@ -33,49 +31,50 @@ export default class Overview extends Component {
     setData() {
         this.setState({
             levelData: [{
-                btnNames: [],
+                btnNames: ["SCSE"],
                 image: "/images/overview.jpg"
             }],
-            yaww: 180,
-            updateText: "initial",
-            author: "SCSE",
-            showPano: false
+            layout: <L1Layout/>, 
+            showLayout: false
         });
     }
 
     handleToggleClick(event) {
-        const childPanoMap = {
-            "Lounge": <LoungePano/>
+        const childLayoutMap = {
+            "L1": <L1Layout/>
         };
         this.setState({
-            showPano: true
+            showLayout: true
         });
-        this.childPano = childPanoMap[event.target.id];
+        this.childLayoutMap = childLayoutMap[event.target.id];
     }
 
     render() {
-
+       
 
         this.items = this.state.levelData.map((item, i) =>
             <div className="container" key={i}>
                 {item.btnNames.map(
                     (btnName, j) => <span key={j}>
-                        {<ButtonOverlay className="first" id={btnName}
-                        > {btnName}</ButtonOverlay>
+                        {<ButtonOverlaySCSE className="zero" id={btnName} onClick={this.handleToggleClick}> 
+                        {btnName}</ButtonOverlaySCSE>
                         }
 
                     </span>)}
                 <img src={item.image} alt={""}/>
             </div>
         );
-        let loadLayout = <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>;
-        let loadPano = <div className="layout-container">{this.childPano}</div>;
+        let loadOverview = <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>;
+        let layout = <div className="layout-container">
+            {this.state.layout}
+        </div>
 
         return (
+            
             <div>
-                {
-                    (this.state.showPano) ? loadPano : loadLayout
-                }
+                {this.state.showLayout ? layout : loadOverview}                
+                
+                
             </div>
         );
     }
