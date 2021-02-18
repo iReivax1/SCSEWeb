@@ -17,7 +17,9 @@ export default class Overview extends Component {
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
-        
+    }
+    handleAlertOnClick (){
+        this.props.setAlertL1();
     }
 
     componentDidMount() {
@@ -47,6 +49,7 @@ export default class Overview extends Component {
             showLayout: true
         });
         this.childLayoutMap = childLayoutMap[event.target.id];
+        this.handleAlertOnClick();
     }
 
     render() {

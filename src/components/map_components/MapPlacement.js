@@ -24,18 +24,27 @@ export default class MapPlacement extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            layout: <Overview/>,
+            layout: <Overview setAlertL1={this.setAlertL1}/>,
             showAlert: false
         };
     }
 
+    setAlertL1 = () =>{
+        this.setState({
+            
+                showAlert: true,
+                quote: "This level has all labs for undergraduate classes",
+                title: "Check out the labs and student lounge"
+            
+        })
+    }
     handleClick = (level) => {
 
         if (level === "B3") {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: true,
-                quote: "This level has all the confidental lab but you could check out AMD's lab. DSAI peeps will go to DMAL once a week ",
+                quote: "This level has all the confidental lab. DSAI peeps will go to DMAL once a week ",
                 title: "Check out the AMD labs"
             });
         } 
@@ -59,7 +68,7 @@ export default class MapPlacement extends Component {
             this.setState({
                 layout: this.childPanoMap[level],
                 showAlert: true,
-                quote: "This level consists of all the research labs. You might get a chance to visit them for your final year project",
+                quote: "This level has research labs, which you might visit for final year project",
                 title: "Just scroll through. Restricted entry!!!"
             });
         }
