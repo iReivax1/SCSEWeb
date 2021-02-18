@@ -68,7 +68,7 @@ function Footer() {
                             {/* <i class='fab fa-typo3' /> */}
                         </Link>
                     </div>
-                    <small className="website-rights">School of computing science and engineering</small>
+                    <small className="website-rights">School of Computer Science and Engineering</small>
                     <div className="social-icons">
                         <Link
                             className="social-icon-link facebook"
