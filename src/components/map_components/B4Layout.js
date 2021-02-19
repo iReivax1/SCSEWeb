@@ -24,7 +24,6 @@ export default class B4Layout extends Component {
             updateText: "initial",
             author: "SCSE"
         };
-        this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
 
     }
