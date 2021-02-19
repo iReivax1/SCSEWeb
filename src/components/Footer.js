@@ -5,7 +5,7 @@ import "./Footer.css";
 function Footer() {
     return (
         <div className="footer-container">
-            <p className="footer-subscription-heading"> Best viewed on desktop using Google chrome or Safari or
+            <p className="footer-subscription-heading"> Best viewed on desktop using Google Chrome or Safari or
                                                         Firefox</p>
             {/* <section className='footer-subscription'>
        
@@ -48,7 +48,7 @@ function Footer() {
                         <Link to={{pathname: "https://scse.ntu.edu.sg/ContactUs/Pages/General-Office.aspx"}}
                               target="_blank">Contact</Link>
                         <Link to={{pathname: "https://scse.ntu.edu.sg/Pages/Home.aspx"}} target="_blank">NTU
-                                                                                                        Website</Link>
+                                                                                                         Website</Link>
                     </div>
                 </div>
                 <div className="footer-link-wrapper">
