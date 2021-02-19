@@ -31,7 +31,6 @@ export const ButtonContainer = styled.button`
   text-transform : capitalize;
   font-size      : 1.4rem;
   background     : transparent;
-  border-color   : var(--mainBlue);
   color          : black;
   border         : 0.1rem solid #3FC6CC;
   border-radius  : 0.5rem;
@@ -53,7 +52,6 @@ export const ButtonContainerHighlight = styled.button`
   text-transform : capitalize;
   font-size      : 1.4rem;
   background     : black;
-  border-color   : var(--mainBlue);
   color          : white;
   border         : 0.1rem solid #3FC6CC;
   border-radius  : 0.5rem;

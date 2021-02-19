@@ -25,7 +25,6 @@
 }
 
 .services {
-    background-image    : url("/images/img-2.jpg");
     background-position : center;
     background-repeat   : no-repeat;
     background-size     : cover;
@@ -34,7 +33,6 @@
 }
 
 .products {
-    background-image    : url("/images/img-1.jpg");
     background-position : center;
     background-repeat   : no-repeat;
     background-size     : cover;

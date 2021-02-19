@@ -23,8 +23,7 @@ export default class B2Layout extends Component {
                 }],
             yaww: 180,
             updateText: "initial",
-            author: "SCSE",
-            showPano: false
+            author: "SCSE"
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
@@ -55,8 +54,7 @@ export default class B2Layout extends Component {
                 }],
             yaww: 180,
             updateText: "initial",
-            author: "SCSE",
-            showPano: false
+            author: "SCSE"
         });
     }
 
@@ -116,8 +114,6 @@ export default class B2Layout extends Component {
                 <img src={item.image} alt={""}/>
             </div>
         );
-        let loadLayout = <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>;
-        let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (
             <div>
@@ -129,9 +125,7 @@ export default class B2Layout extends Component {
                     quote={this.state.quote}
                     Close={() => this.setState({showAlert: false})}
                 /> : null}
-                {
-                    (this.state.showPano) ? loadPano : loadLayout
-                }
+                <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>
             </div>
         );
     }

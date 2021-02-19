@@ -22,8 +22,7 @@ export default class B4Layout extends Component {
                 }],
             yaww: 180,
             updateText: "initial",
-            author: "SCSE",
-            showPano: false
+            author: "SCSE"
         };
         this.handleToggleClick = this.handleToggleClick.bind(this);
         this.setData = this.setData.bind(this);
@@ -54,17 +53,8 @@ export default class B4Layout extends Component {
                 }],
             yaww: 180,
             updateText: "initial",
-            author: "SCSE",
-            showPano: false
+            author: "SCSE"
         });
-    }
-
-    handleToggleClick(event) {
-        const childPanoMap = {};
-        this.setState({
-            showPano: true
-        });
-        this.childPano = childPanoMap[event.target.id];
     }
 
     render() {
@@ -81,16 +71,11 @@ export default class B4Layout extends Component {
                 <img src={item.image} alt={""}/>
             </div>
         );
-        let loadLayout = <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>;
-        let loadPano = <div className="layout-container">{this.childPano}</div>;
 
         return (
 
             <div>
-
-                {
-                    (this.state.showPano) ? loadPano : loadLayout
-                }
+                <ImageScroller hideScrollbar={false}>{this.items}</ImageScroller>
             </div>
         );
     }

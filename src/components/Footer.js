@@ -30,9 +30,9 @@ function Footer() {
                 <div className="footer-link-wrapper">
                     <div className="footer-link-items">
                         <h2>About Us</h2>
-                        <Link to={{pathname: "http://scse.ntu.edu.sg/aboutus/Pages/Overview.aspx"}}
+                        <Link to={{pathname: "https://scse.ntu.edu.sg/aboutus/Pages/Overview.aspx"}}
                               target="_blank">Overview</Link>
-                        <Link to={{pathname: "http://scse.ntu.edu.sg/aboutus/career/Pages/default.aspx"}}
+                        <Link to={{pathname: "https://scse.ntu.edu.sg/aboutus/career/Pages/default.aspx"}}
                               target="_blank">Career Prospects</Link>
                         <Link to={{pathname: "https://www.ntu.edu.sg/Pages/Disclaimer.aspx"}} target="_blank">Terms of
                                                                                                               Service</Link>
@@ -45,9 +45,9 @@ function Footer() {
                     </div>
                     <div className="footer-link-items">
                         <h2>Contact Us</h2>
-                        <Link to={{pathname: "http://scse.ntu.edu.sg/ContactUs/Pages/General-Office.aspx"}}
+                        <Link to={{pathname: "https://scse.ntu.edu.sg/ContactUs/Pages/General-Office.aspx"}}
                               target="_blank">Contact</Link>
-                        <Link to={{pathname: "http://scse.ntu.edu.sg/Pages/Home.aspx"}} target="_blank">NTU
+                        <Link to={{pathname: "https://scse.ntu.edu.sg/Pages/Home.aspx"}} target="_blank">NTU
                                                                                                         Website</Link>
                     </div>
                 </div>
