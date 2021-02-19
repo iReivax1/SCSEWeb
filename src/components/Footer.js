@@ -5,7 +5,8 @@ import "./Footer.css";
 function Footer() {
     return (
         <div className="footer-container">
-             <p className='footer-subscription-heading'> Best viewed on desktop using Google chrome or Safari or Firefox</p>
+            <p className="footer-subscription-heading"> Best viewed on desktop using Google chrome or Safari or
+                                                        Firefox</p>
             {/* <section className='footer-subscription'>
        
           Join the newsletter our latest news
