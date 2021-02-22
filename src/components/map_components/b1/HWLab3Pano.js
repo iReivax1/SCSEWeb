@@ -70,7 +70,7 @@ export default class HWlab3Pano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotdebug={false}
                 >
                     <Pannellum.Hotspot
                         type="custom"
@@ -148,7 +148,7 @@ export default class HWlab3Pano extends Component {
                     showControls
                     showFullscreenCtrl
                     showZoomCtrl
-                    hotspotDebug={true}
+                    hotspotdebug={false}
                 >
                     {/*Back of Room*/}
                     <Pannellum.Hotspot
